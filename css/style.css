@@ -47,11 +47,24 @@ html { -webkit-box-sizing: border-box; box-sizing: border-box; }
 .nav__link { font-size: 12px; display: inline-block; text-decoration: none; font-family: "MarkSimonsonProximaNovaAltCondensedSemibold", sans-serif; color: #4a4a4a; position: relative; cursor: pointer; padding-bottom: 15px; }
 .nav__link:after { content: ""; display: block; position: absolute; bottom: 0px; left: 0; right: 0; border-bottom: 2px solid transparent; -webkit-transition: all 0.3s; transition: all 0.3s; }
 .nav__link + .nav__link { margin-left: 30px; }
+.nav__link:hover, .nav__link.is-active { color: #c3b091; }
 .nav__link:hover:after, .nav__link.is-active:after { border-color: #c3b091; }
 
-body { font-family: "ITCNewVeljovicDSPro", sans-serif; font-size: 16px; line-height: 1.4; }
+.footer { position: relative; background-color: #fafafa; text-transform: uppercase; color: #4a4a4a; font-family: "ITCNewVeljovicProCnMd", serif; font-size: 20px; }
+.footer .inner { padding: 22px 0; }
+.footer__r { float: right; width: 300px; }
+.footer__c { overflow: hidden; padding: 0 110px 0 100px; }
+.footer__l { float: left; width: 220px; }
+
+.copy { color: #3c3c3c; font-size: 13px; text-transform: none; font-family: "ITCNewVeljovicDSPro", sans-serif; }
+
+.link-mail { font-family: "ITCNewVeljovicDSPro", sans-serif; color: #c3b091; text-decoration: none; font-size: 20px; text-transform: lowercase; }
+
+body { font-family: "ITCNewVeljovicDSPro", sans-serif; font-size: 16px; line-height: 1.2; }
 
 a { -webkit-transition: all 0.3s; transition: all 0.3s; }
+
+address, strong, em { font-weight: 400; font-style: normal; }
 
 .inner { width: 960px; margin: auto; }
 
@@ -63,8 +76,8 @@ a { -webkit-transition: all 0.3s; transition: all 0.3s; }
 
 .link { text-decoration: underline; font-size: 12px; font-family: "MarkSimonsonProximaNovaAltCondensedSemibold", sans-serif; font-weight: normal; color: #c3b091; }
 
-.out { width: 1360px; margin: auto; }
-
+.out { width: 1360px; margin: 0 auto -92px; min-height: 100%; }
+.out:after { content: ""; display: block; height: 92px; }
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px){
  *{ -webkit-text-size-adjust: none; } }
 
