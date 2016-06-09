@@ -29,8 +29,45 @@
 // 	font-family: "book", Arial, sans-serif
 
 body
-	font-family: Arial, sans-serif
-	font-size: 12px
-	line-height: 1
-	
+	+pro
+	font-size: $font-normal
+	line-height: 1.4
+a
+	+tr(all 0.3s)
 // common blocks
+
+//extends
+%wrp
+	width: 960px
+	margin: auto
+%button
+	position: relative
+	display: inline-block
+	text-align: center
+	border-radius: 100px
+	padding: 11px 30px
+	text-decoration: none
+	color: $color-active
+	background-color: $color-white-1
+	border: 1px solid $color-active
+	font-size: $font-small-x
+	+semi
+
+//basic
+.btn
+	@extend %button
+	+tr(all 0.3s)
+	&:hover
+		background-color: $color-active
+		color: $color-white-1
+	&:active
+		background-color: darken($color-active, 5%)
+		color: $color-white-1
+.link
+	text-decoration: underline
+	font-size: $font-small-x
+	+semi
+	font-weight: normal
+	color: $color-active
+.inner
+	@extend %wrp

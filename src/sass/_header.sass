@@ -1,0 +1,46 @@
+.header
+	position: relative
+	+clr
+	&__in
+		padding: 18px 50px 19px
+	&__logo
+		width: $width-col-header
+		float: left
+		font-size: 0
+		line-height: 1
+		padding-top: 6px
+	&__switcher
+		width: $width-col-header
+		float: right
+		text-align: right
+	&__nav
+		overflow: hidden
+		text-align: center
+.logo
+	display: inline-block
+.nav
+	display: inline-block
+	font-size: 0
+	&__link
+		font-size: $font-small-x
+		display: inline-block
+		text-decoration: none
+		+semi
+		color: $color-dark-1
+		position: relative
+		cursor: pointer
+		padding-bottom: 15px
+		&:after
+			content: ''
+			display: block
+			position: absolute
+			bottom: 0px
+			left: 0
+			right: 0
+			border-bottom: 2px solid transparent
+			+tr(all 0.3s)
+		+ .nav__link
+			margin-left: 30px
+		&:hover, &.is-active
+			&:after
+				border-color: $color-active

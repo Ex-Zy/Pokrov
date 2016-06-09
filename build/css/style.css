@@ -31,7 +31,39 @@ html { -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 .icon-skrill:before { content: ""; }
 
-body { font-family: Arial, sans-serif; font-size: 12px; line-height: 1; }
+@font-face { font-family: "ITCNewVeljovicDSPro"; src: url("fonts/ITCNewVeljovicDSPro.eot"); src: url("fonts/ITCNewVeljovicDSPro.eot?#iefix") format("embedded-opentype"), url("fonts/ITCNewVeljovicDSPro.woff2") format("woff2"), url("fonts/ITCNewVeljovicDSPro.woff") format("woff"), url("fonts/ITCNewVeljovicDSPro.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+@font-face { font-family: "ITCNewVeljovicProCnMd"; src: url("fonts/ITCNewVeljovicProCnMd.eot"); src: url("fonts/ITCNewVeljovicProCnMd.eot?#iefix") format("embedded-opentype"), url("fonts/ITCNewVeljovicProCnMd.woff2") format("woff2"), url("fonts/ITCNewVeljovicProCnMd.woff") format("woff"), url("fonts/ITCNewVeljovicProCnMd.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+@font-face { font-family: "MarkSimonsonProximaNovaAltCondensedSemibold"; src: url("fonts/MarkSimonsonProximaNovaAltCondensedSemibold.eot"); src: url("fonts/MarkSimonsonProximaNovaAltCondensedSemibold.eot?#iefix") format("embedded-opentype"), url("fonts/MarkSimonsonProximaNovaAltCondensedSemibold.woff2") format("woff2"), url("fonts/MarkSimonsonProximaNovaAltCondensedSemibold.woff") format("woff"), url("fonts/MarkSimonsonProximaNovaAltCondensedSemibold.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+.header { position: relative; *zoom: 1; }
+.header:after { content: " "; display: table; clear: both; }
+.header__in { padding: 18px 50px 19px; }
+.header__logo { width: 160px; float: left; font-size: 0; line-height: 1; padding-top: 6px; }
+.header__switcher { width: 160px; float: right; text-align: right; }
+.header__nav { overflow: hidden; text-align: center; }
+
+.logo { display: inline-block; }
+
+.nav { display: inline-block; font-size: 0; }
+.nav__link { font-size: 12px; display: inline-block; text-decoration: none; font-family: "MarkSimonsonProximaNovaAltCondensedSemibold", sans-serif; color: #4a4a4a; position: relative; cursor: pointer; padding-bottom: 15px; }
+.nav__link:after { content: ""; display: block; position: absolute; bottom: 0px; left: 0; right: 0; border-bottom: 2px solid transparent; -webkit-transition: all 0.3s; transition: all 0.3s; }
+.nav__link + .nav__link { margin-left: 30px; }
+.nav__link:hover:after, .nav__link.is-active:after { border-color: #c3b091; }
+
+body { font-family: "ITCNewVeljovicDSPro", sans-serif; font-size: 16px; line-height: 1.4; }
+
+a { -webkit-transition: all 0.3s; transition: all 0.3s; }
+
+.inner { width: 960px; margin: auto; }
+
+.btn { position: relative; display: inline-block; text-align: center; -webkit-border-radius: 100px; border-radius: 100px; padding: 11px 30px; text-decoration: none; color: #c3b091; background-color: #fff; border: 1px solid #c3b091; font-size: 12px; font-family: "MarkSimonsonProximaNovaAltCondensedSemibold", sans-serif; }
+
+.btn { -webkit-transition: all 0.3s; transition: all 0.3s; }
+.btn:hover { background-color: #c3b091; color: #fff; }
+.btn:active { background-color: #baa481; color: #fff; }
+
+.link { text-decoration: underline; font-size: 12px; font-family: "MarkSimonsonProximaNovaAltCondensedSemibold", sans-serif; font-weight: normal; color: #c3b091; }
+
+.out { width: 1360px; margin: auto; }
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px){
  *{ -webkit-text-size-adjust: none; } }
