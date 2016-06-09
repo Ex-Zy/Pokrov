@@ -74,3 +74,22 @@ address, strong, em
 	color: $color-active
 .inner
 	@extend %wrp
+
+//titles
+.h1
+	+md
+	color: $color-dark-1
+	
+//pages-list
+.pages-list
+	display: inline-block
+	list-style-type: decimal
+	padding: 50px
+	font-size: 24px
+	a
+		color: black
+		text-decoration: none
+		font-weight: 900
+		&:hover
+			text-decoration: underline
+
