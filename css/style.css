@@ -39,7 +39,7 @@ html { -webkit-box-sizing: border-box; box-sizing: border-box; }
 .header__in { padding: 18px 50px 19px; }
 .header__logo { width: 160px; float: left; font-size: 0; line-height: 1; padding-top: 6px; }
 .header__switcher { width: 160px; float: right; text-align: right; }
-.header__nav { overflow: hidden; text-align: center; }
+.header__nav { overflow: hidden; text-align: center; white-space: nowrap; }
 
 .logo { display: inline-block; }
 
@@ -66,8 +66,11 @@ a { -webkit-transition: all 0.3s; transition: all 0.3s; }
 
 address, strong, em { font-weight: 400; font-style: normal; }
 
-.inner { width: 960px; margin: auto; *zoom: 1; }
-.inner:after { content: " "; display: table; clear: both; }
+p { font-family: "ITCNewVeljovicDSPro", sans-serif; color: #4a4a4a; font-size: 16px; }
+p:not(:last-of-type) { margin-bottom: 20px; }
+
+.inner, .l-layout { max-width: 960px; width: 100%; margin: auto; *zoom: 1; }
+.inner:after, .l-layout:after { content: " "; display: table; clear: both; }
 
 .btn { position: relative; display: inline-block; text-align: center; -webkit-border-radius: 100px; border-radius: 100px; padding: 11px 30px; text-decoration: none; color: #c3b091; background-color: #fff; border: 1px solid #c3b091; font-size: 12px; font-family: "MarkSimonsonProximaNovaAltCondensedSemibold", sans-serif; }
 
@@ -77,32 +80,34 @@ address, strong, em { font-weight: 400; font-style: normal; }
 
 .link { text-decoration: underline; font-size: 12px; font-family: "MarkSimonsonProximaNovaAltCondensedSemibold", sans-serif; font-weight: normal; color: #c3b091; }
 
-.title { font-family: "ITCNewVeljovicProCnMd", serif; color: #4a4a4a; text-transform: uppercase; font-size: 30px; font-weight: normal; margin-bottom: 40px; }
+.h1, .h2, .h3 { font-family: "ITCNewVeljovicProCnMd", serif; color: #4a4a4a; font-weight: normal; }
 
-.h3 { font-family: "ITCNewVeljovicProCnMd", serif; font-size: 20px; font-weight: normal; color: #4a4a4a; margin-bottom: 25px; }
+.h1 { text-transform: uppercase; font-size: 30px; margin-bottom: 40px; }
 
-.text-c { font-family: "ITCNewVeljovicDSPro", sans-serif; color: #4a4a4a; font-size: 16px; }
+.h3 { font-size: 20px; margin-bottom: 25px; }
 
 .pages-list { display: inline-block; list-style-type: decimal; padding: 50px; font-size: 24px; }
 .pages-list a { color: black; text-decoration: none; font-weight: 900; }
 .pages-list a:hover { text-decoration: underline; }
 
-.out { width: 1360px; margin: 0 auto -92px; min-height: 100%; }
+.out { max-width: 1360px; width: 100%; margin: 0 auto -92px; min-height: 100%; }
 .out:after { content: ""; display: block; height: 92px; }
 
 .article { padding: 70px 0; }
-.article_center { text-align: center; }
-.article p { margin-bottom: 60px; }
+.article_center { text-align: center; max-width: 780px; width: 100%; margin: auto; }
+.article_center .h1 { padding: 0px 155px; }
+.article__text { margin-bottom: 60px; }
 
-.gallery .title { text-align: center; }
+.gallery .h1 { text-align: center; }
 
-.item { font-size: 0; margin: 0 0 0 -1%; }
-.item__list { float: left; width: 56%; margin-left: 1%; margin-bottom: 63px; }
-.item__list h3 { max-width: 352px; }
-.item__list img { width: 100%; display: block; height: auto; }
-.item__list a { text-transform: uppercase; text-decoration: none; color: #4a4a4a; }
-.item__list-pic { margin-bottom: 33px; }
-.item__list-width { width: 41%; }
+.item-list { font-size: 0; margin: 0 0 0 -1%; }
+
+.item { float: left; width: 56%; margin-left: 1%; margin-bottom: 50px; }
+.item h3 { padding: 0 20px 0 0; }
+.item img { width: 100%; display: block; height: auto; }
+.item a { text-transform: uppercase; text-decoration: none; color: #4a4a4a; }
+.item__pic { margin-bottom: 33px; min-height: 31.25%; }
+.item_width { width: 41%; }
 
 .services_intro { background: url(../img/services_image.jpg); background-repeat: no-repeat; min-height: 250px; background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; }
 
