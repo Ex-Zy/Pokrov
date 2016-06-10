@@ -1,6 +1,7 @@
 // Normally mainpage styles 
 .out
-	max-width: 1360px
+	max-width: 1400px
+	padding: 0 20px
 	width: 100%
 	margin: 0 auto -92px
 	min-height: 100%
@@ -79,3 +80,51 @@
 			width: 100%
 			display: block
 			height: auto
+.slider
+	padding: 30px 0 0
+.slider-wrp
+	width: 770px
+	position: relative
+.slider-pic
+	&__item
+		background-size: cover
+		height: 430px
+.slider-text
+	position: absolute
+	top: 0
+	bottom: 0
+	right: -380px
+	margin: auto
+	width: 460px
+	height: 300px
+	padding: 55px 60px
+	background-color: $color-white-1
+	box-shadow: 4px 4px 13px 0 rgba(0, 0, 0, 0.1)
+	z-index: 2
+	text-align: right
+	.h1
+		margin-bottom: $space
+	p
+		line-height: 22px
+		color: rgba(74, 74, 74, 0.6)
+	.slick-arrow
+		width: 65px
+		height: 65px
+		background-color: transparent
+		top: 100%
+		margin-top: 0
+		&:before
+			+hide-text
+			width: 8px
+			height: 17px
+	.slick-prev
+		right: 65px
+		left: auto
+		&:before
+			background: url(../img/svg/arrow_left.svg)
+	.slick-next
+		right: 0
+		left: auto
+		&:before
+			background: url(../img/svg/arrow_right.svg)
+
