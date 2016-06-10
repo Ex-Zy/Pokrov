@@ -1,57 +1,58 @@
-// Normally mainpage styles
+// Normally mainpage styles 
 .out
-	width: 1360px
+	max-width: 1360px
+	width: 100%
 	margin: 0 auto -92px
 	min-height: 100%
 	&:after
 		content: ''
 		display: block
 		height: 92px
-
-// / article
-
+.l-layout
+	@extend %wrp
 .article
 	padding: 70px 0
 	&_center
 		text-align: center
-	p
-		margin-bottom: 60px
-// / gallery
+		max-width: 780px
+		width: 100%
+		margin: auto
+		.h1
+			padding: 0px 155px
+	&__text
+		margin-bottom: $space-triple
 .gallery
-	.title
+	.h1
 		text-align: center
-.item
+.item-list
 	font-size: 0
 	margin: 0 0 0 -1%
-	&__list
-		// display: inline-block
-		// vertical-align: top
-		float: left
-		width: 56%
-		margin-left: 1%
-		margin-bottom: 63px
-		h3
-			max-width: 352px
-		img
-			width: 100%
-			display: block
-			height: auto
-		a
-			text-transform: uppercase
-			text-decoration: none
-			color: $color-dark-1
-	&__list-pic
+.item
+	float: left
+	width: 56%
+	margin-left: 1%
+	margin-bottom: 50px
+	h3
+		// max-width: 352px
+		padding: 0 $space 0 0
+	img
+		width: 100%
+		display: block
+		height: auto
+	a
+		text-transform: uppercase
+		text-decoration: none
+		color: $color-dark-1
+	&__pic
 		margin-bottom: 33px
-	&__list-width
+		min-height: 31.25%
+	&_width
 		width: 41%
-
-// services_intro
 .services_intro
 	background: url(../img/services_image.jpg)
 	background-repeat: no-repeat
 	min-height: 250px
 	+cover
-// services
 .services
 	padding-top: 60px
 .services__list
@@ -62,12 +63,11 @@
 	width: 50%
 	h3
 		max-width: 352px
-		margin-bottom: 40px
+		margin-bottom: $space-double
 	a
 		color: $color-dark-1
 		text-transform: uppercase
 		text-decoration: none
-// about
 .about
 	&__content
 		width: 50%

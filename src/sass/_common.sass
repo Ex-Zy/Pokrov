@@ -37,11 +37,18 @@ a
 address, strong, em
 	font-weight: 400
 	font-style: normal
+p
+	+pro
+	color: $color-dark-1
+	font-size: $font-normal
+	&:not(:last-of-type)
+		margin-bottom: $space
 // common blocks
 
 //extends
 %wrp
-	width: 960px
+	max-width: 960px
+	width: 100%
 	margin: auto
 	+clr
 %button
@@ -77,23 +84,19 @@ address, strong, em
 	@extend %wrp
 
 //titles
-.title
-	+md
-	color: $color-dark-1
-	text-transform: uppercase
-	font-size: $font-large-x
-	font-weight: normal
-	margin-bottom: 40px
+.h1, 
+.h2, 
 .h3
 	+md
-	font-size: $font-medium
+	color: $color-dark-1
 	font-weight: normal
-	color: $color-dark-1
-	margin-bottom: 25px
-.text-c
-	+pro
-	color: $color-dark-1
-	font-size: $font-normal
+.h1
+	text-transform: uppercase
+	font-size: $font-large-x
+	margin-bottom: $space-double
+.h3
+	font-size: $font-medium
+	margin-bottom: 25px 
 	
 //pages-list
 .pages-list
