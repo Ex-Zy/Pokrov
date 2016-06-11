@@ -226,6 +226,12 @@ p:not(:last-of-type) { margin-bottom: 20px; }
 .category img { width: 100%; height: auto; display: block; }
 .category__content { margin-bottom: 40px; }
 .category__pic { margin-bottom: 40px; }
+
+.album { padding-bottom: 80px; }
+.album__list { font-size: 0; margin: 0 0 0 -0.5%; *zoom: 1; }
+.album__list:after { content: " "; display: table; clear: both; }
+.album__list-item { float: left; width: 24.5%; margin-left: 0.5%; margin-bottom: 0.5%; }
+.album__list-item img { width: 100%; height: auto; display: block; }
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px){
  *{ -webkit-text-size-adjust: none; } }
 
