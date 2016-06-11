@@ -51,6 +51,11 @@ p
 	width: 100%
 	margin: auto
 	+clr
+%inner_r
+	float: right
+	max-width: 1160px
+	margin: auto
+	+clr
 %button
 	position: relative
 	display: inline-block
@@ -82,6 +87,8 @@ p
 	color: $color-active
 .inner
 	@extend %wrp
+.inner_r
+	@extend %inner_r
 
 //titles
 .h1, 
@@ -97,6 +104,12 @@ p
 .h3
 	font-size: $font-medium
 	margin-bottom: 25px 
+.data
+	+pro
+	color: $color-active
+	font-size: $font-normal
+	font-weight: normal
+	line-height: 1.38
 	
 //pages-list
 .pages-list

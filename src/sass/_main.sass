@@ -51,28 +51,36 @@
 		width: 41%
 .services_intro
 	background: url(../img/services_image.jpg)
-	background-repeat: no-repeat
 	min-height: 250px
 	+cover
 .services
-	padding-top: 60px
+	padding-top: $space
+	padding-bottom: 150px
 .services__list
 	font-size: 0
 	width: 100%
+	+clr
+	margin-left: 10%
 .services__list-item
 	float: left
 	width: 50%
+	margin-top: $space-double
 	h3
 		max-width: 352px
-		margin-bottom: $space-double
+		margin-bottom: 0
 	a
 		color: $color-dark-1
 		text-transform: uppercase
 		text-decoration: none
 .about
+	+clr
 	&__content
-		width: 50%
+		width: 38%
 		float: left
+		margin-right: 12%
+		margin-top: 40px
+	&__text
+		margin-bottom: 40px
 	&__pic
 		width: 50%
 		float: right
@@ -80,8 +88,35 @@
 			width: 100%
 			display: block
 			height: auto
-.slider
-	padding: 30px 0 0
+.about
+	.out
+	&:after
+		display: none
+.news
+	+clr
+	padding-bottom: 80px
+	&__col
+		+clr
+		&:not(:last-child)
+			margin-bottom: 60px
+	&__content
+		margin-top: 20px
+		width: 27%
+		float: left
+		margin-right: 23%
+	&__title
+		h2
+			margin-bottom: 0
+		margin-bottom: 20px
+	&__pic
+		width: 50%
+		float: right
+		img
+			width: 100%
+			display: block
+			height: auto
+	&__desc
+		margin-bottom: 30px
 .slider-wrp
 	width: 770px
 	position: relative
