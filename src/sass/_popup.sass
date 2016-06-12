@@ -1,0 +1,58 @@
+.popup
+	position: fixed
+	top: 0
+	right: 0
+	bottom: 0
+	left: 0
+	z-index: 999
+	+vertical
+.overlay
+	position: fixed
+	top: 0
+	right: 0
+	bottom: 0
+	left: 0
+	background-color: rgba(0, 0, 0, 0.7) 
+.popup__main
+	display: inline-block
+	vertical-align: middle
+	max-width: 1360px
+	width: 100%
+	text-align: left
+	background-color: $color-white-1
+	position: relative
+	z-index: 1
+.popup__col
+	display: inline-block
+	vertical-align: top
+	width: 50%
+.popup__content
+	max-width: 1210px
+	float: right
+.popup__header
+	height: 50px
+	padding-left: 50px
+	position: relative
+	h1
+		display: inline-bloc
+		padding: 18px 0px 19px
+.close
+	position: absolute
+	top: 0
+	right: 0
+	background-color: $color-active
+	width: 50px
+	height: 50px 
+	&:before
+		content: ''
+		display: block
+		background: url(../img/svg/close_button_white.svg) no-repeat center
+		width: 17px
+		height: 17px
+		top: 0
+		right: 0
+		bottom: 0
+		left: 0
+		margin: auto
+.slider-pop-text
+	@extend %slide-t
