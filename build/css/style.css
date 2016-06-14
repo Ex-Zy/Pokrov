@@ -243,19 +243,18 @@ p:not(:last-of-type) { margin-bottom: 20px; }
 .products { padding-bottom: 80px; }
 .products__album { margin-bottom: 60px; }
 
-.popup { display: none; position: fixed; top: 0; right: 0; bottom: 0; left: 0; z-index: 999; overflow: auto; text-align: center; font-size: 0; }
-.popup:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
+.popup { display: none; position: fixed; top: 0; right: 0; bottom: 0; left: 0; z-index: 999; overflow: auto; background-color: #FFF; }
 .popup.is-active { display: block; }
 
 .popup__overlay { position: absolute; top: 0; right: 0; bottom: 0; left: 0; background-color: rgba(0, 0, 0, 0.7); }
 
-.popup__main { display: inline-block; vertical-align: middle; height: 100%; width: 100%; text-align: left; background-color: #fff; position: relative; z-index: 1; }
+.popup__main { display: inline-block; overflow-y: auto; overflow-x: hidden; width: 100%; text-align: left; background-color: #fff; position: relative; z-index: 1; }
 
 .popup__col { display: inline-block; vertical-align: top; width: 50%; }
 
 .popup__content { max-width: 1210px; width: 100%; float: right; }
 
-.popup__wrp { padding: 130px 0 80px; height: 100%; max-width: 1360px; margin: auto; overflow-y: auto; }
+.popup__wrp { padding: 130px 0 80px; height: 100%; max-width: 1360px; margin: auto; }
 
 .popup__header { height: 50px; padding-left: 50px; position: absolute; top: 0; left: 0; right: 0; }
 .popup__header h1 { display: inline-block; padding: 18px 0px 19px; }
@@ -265,7 +264,7 @@ p:not(:last-of-type) { margin-bottom: 20px; }
 
 .d-list { position: relative; font-size: 0; }
 .d-list__item { width: 33.3333%; display: inline-block; vertical-align: top; position: relative; padding: 0 25px; }
-.d-list__item img { max-width: 347px; display: block; height: auto; margin: auto; }
+.d-list__item img { max-width: 347px; width: 100%; display: block; height: auto; margin: auto; }
 .d-list__item.is-active { -webkit-transform: scale(1.1); -ms-transform: scale(1.1); transform: scale(1.1); }
 .d-list__item.is-active:after { opacity: 0; }
 .d-list__item.is-active .sign { opacity: 1; }

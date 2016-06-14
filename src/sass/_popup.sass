@@ -7,10 +7,11 @@
 	left: 0
 	z-index: 999
 	overflow: auto
-	+vertical
+	background-color: #FFF
+	// +vertical
 	&.is-active
 		display: block
-.popup__overlay
+.popup__overlay/* возможно потребуется убрать */
 	position: absolute
 	top: 0
 	right: 0
@@ -19,9 +20,10 @@
 	background-color: rgba(0, 0, 0, 0.7) 
 .popup__main
 	display: inline-block
-	vertical-align: middle
-	// max-width: 1360px
-	height: 100%
+	// vertical-align: middle
+	overflow-y: auto
+	overflow-x: hidden
+	// height: 100%
 	width: 100%
 	text-align: left
 	background-color: $color-white-1
@@ -40,7 +42,6 @@
 	height: 100%
 	max-width: 1360px
 	margin: auto
-	overflow-y: auto
 .popup__header
 	height: 50px
 	padding-left: 50px
@@ -82,6 +83,7 @@
 		padding: 0 25px
 		img
 			max-width: 347px
+			width: 100%
 			display: block
 			height: auto
 			margin: auto
