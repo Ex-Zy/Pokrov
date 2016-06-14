@@ -20,7 +20,8 @@
 .popup__main
 	display: inline-block
 	vertical-align: middle
-	max-width: 1360px
+	// max-width: 1360px
+	height: 100%
 	width: 100%
 	text-align: left
 	background-color: $color-white-1
@@ -35,11 +36,18 @@
 	width: 100%
 	float: right
 .popup__wrp
-	padding: 80px 0
+	padding: 130px 0 80px
+	height: 100%
+	max-width: 1360px
+	margin: auto
+	overflow-y: auto
 .popup__header
 	height: 50px
 	padding-left: 50px
-	position: relative
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
 	h1
 		display: inline-block
 		padding: 18px 0px 19px
@@ -71,15 +79,18 @@
 		display: inline-block
 		vertical-align: top
 		position: relative
-		min-height: 500px
-		background-size: contain
 		padding: 0 25px
-		background-repeat: no-repeat
-		background-position: center
+		img
+			max-width: 347px
+			display: block
+			height: auto
+			margin: auto
 		&.is-active
 			+scale(1.1)
 			&:after
 				opacity: 0
+			.sign
+				opacity: 1
 		&:after
 			content: ''
 			display: block
@@ -90,3 +101,11 @@
 			height: 100%
 			background-color: rgba(255, 255, 255, 0.9)
 			opacity: 1
+.sign
+	font-size: 16px
+	color: $color-dark-1
+	+md
+	line-height: 1
+	text-align: center
+	padding: 20px 0
+	opacity: 0
