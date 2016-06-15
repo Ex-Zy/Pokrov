@@ -3,12 +3,13 @@
 	max-width: 1400px
 	padding: 0 20px
 	width: 100%
-	margin: 0 auto -92px
 	min-height: 100%
+.out_sticky-footer
 	&:after
 		content: ''
 		display: block
 		height: 92px
+		margin: 0 auto -92px
 .l-layout
 	@extend %wrp
 .article
@@ -130,10 +131,6 @@
 			width: 100%
 			display: block
 			height: auto
-.technology
-	.out
-	&:after
-		display: none
 .news
 	+clr
 	padding-bottom: 80px
@@ -164,6 +161,27 @@
 	&__content
 		width: 27%
 		float: left
+		margin-top: 117px
+		p
+			font-size: $font-small
+			margin-bottom: 18px
+		adress
+			font-size: $font-medium
+			font-weight: normal
+			color: $color-dark-1
+			+pro
+	&__adr
+		margin-bottom: 80px
+	&__info
+		a
+			margin-bottom: 10px
+			display: block
+		span
+			display: block
+			font-size: $font-medium
+			font-weight: normal
+			+pro
+			color: $color-dark-1
 	&__map
 		width: 50%
 		float: right
@@ -236,9 +254,16 @@
 			height: auto
 			display: block
 .products-intro
-	background: url(../img/services_category_01_slide_image)
+	background: url(../img/services_category_01_slide_image.jpg)
+	min-height: 250px
 	+cover
 .products
-	padding-bottom: 80px
+	padding: 40px 0 80px 0
+	&__text
+		margin-bottom: 55px
 	&__album
 		margin-bottom: $space-triple
+		.album__list
+			margin-bottom: $space-double
+		.btn-c
+			text-align: center
