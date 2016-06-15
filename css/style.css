@@ -132,7 +132,7 @@ p:not(:last-of-type) { margin-bottom: 20px; }
 
 .data { font-family: "ITCNewVeljovicDSPro", sans-serif; color: #c3b091; font-size: 16px; font-weight: normal; line-height: 1.38; }
 
-.title { font-family: "MarkSimonsonProximaNovaAltCondensedSemibold", sans-serif; color: #c3b091; font-size: 12px; font-weight: 600; text-transform: uppercase; margin-bottom: 15px; }
+.h4 { font-family: "MarkSimonsonProximaNovaAltCondensedSemibold", sans-serif; color: #c3b091; font-size: 12px; font-weight: 600; text-transform: uppercase; margin-bottom: 15px; }
 
 .title-link { font-family: "ITCNewVeljovicProCnMd", serif; font-size: 24px; color: #4a4a4a; font-weight: normal; text-decoration: none; line-height: 1.25; }
 
@@ -143,8 +143,9 @@ p:not(:last-of-type) { margin-bottom: 20px; }
 .pages-list a { color: black; text-decoration: none; font-weight: 900; }
 .pages-list a:hover { text-decoration: underline; }
 
-.out { max-width: 1400px; padding: 0 20px; width: 100%; margin: 0 auto -92px; min-height: 100%; }
-.out:after { content: ""; display: block; height: 92px; }
+.out { max-width: 1400px; padding: 0 20px; width: 100%; min-height: 100%; }
+
+.out_sticky-footer:after { content: ""; display: block; height: 92px; margin: 0 auto -92px; }
 
 .article { padding: 70px 0; }
 .article_center { text-align: center; max-width: 780px; width: 100%; margin: auto; }
@@ -193,8 +194,6 @@ p:not(:last-of-type) { margin-bottom: 20px; }
 .technology__pic { width: 50%; float: right; }
 .technology__pic img { width: 100%; display: block; height: auto; }
 
-.technology:after { display: none; }
-
 .news { *zoom: 1; padding-bottom: 80px; }
 .news:after { content: " "; display: table; clear: both; }
 .news__col { *zoom: 1; }
@@ -209,7 +208,12 @@ p:not(:last-of-type) { margin-bottom: 20px; }
 
 .contacts { *zoom: 1; }
 .contacts:after { content: " "; display: table; clear: both; }
-.contacts__content { width: 27%; float: left; }
+.contacts__content { width: 27%; float: left; margin-top: 117px; }
+.contacts__content p { font-size: 14px; margin-bottom: 18px; }
+.contacts__content adress { font-size: 20px; font-weight: normal; color: #4a4a4a; font-family: "ITCNewVeljovicDSPro", sans-serif; }
+.contacts__adr { margin-bottom: 80px; }
+.contacts__info a { margin-bottom: 10px; display: block; }
+.contacts__info span { display: block; font-size: 20px; font-weight: normal; font-family: "ITCNewVeljovicDSPro", sans-serif; color: #4a4a4a; }
 .contacts__map { width: 50%; float: right; }
 
 .slider-wrp { width: 770px; position: relative; }
@@ -238,10 +242,13 @@ p:not(:last-of-type) { margin-bottom: 20px; }
 .album__list-item { float: left; width: 24.5%; margin-left: 0.5%; margin-bottom: 0.5%; }
 .album__list-item img { width: 100%; height: auto; display: block; }
 
-.products-intro { background: url(../img/services_category_01_slide_image); background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; }
+.products-intro { background: url(../img/services_category_01_slide_image.jpg); min-height: 250px; background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; }
 
-.products { padding-bottom: 80px; }
+.products { padding: 40px 0 80px 0; }
+.products__text { margin-bottom: 55px; }
 .products__album { margin-bottom: 60px; }
+.products__album .album__list { margin-bottom: 40px; }
+.products__album .btn-c { text-align: center; }
 
 .popup { display: none; position: fixed; top: 0; right: 0; bottom: 0; left: 0; z-index: 999; overflow: auto; text-align: center; font-size: 0; }
 .popup:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
