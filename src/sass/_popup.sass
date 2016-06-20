@@ -35,12 +35,45 @@
 	display: inline-block
 	vertical-align: top
 	width: 50%
+	position: relative
+	height: 100%
 .popup__side
 	float: right
 	max-width: 590px
 	height: auto
 .popup__content
 	@extend %wrp
+	height: 100%
+	position: relative
+	.arrow-left
+		left: 330px
+	.arrow-right
+		left: 395px
+.arrow
+	width: 65px
+	height: 65px
+	background-color: #FFF 
+	cursor: pointer
+	position: absolute
+	bottom: 0
+	+hide-text
+	&:before
+		content: ''
+		display: block
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+		width: 8px
+		height: 17px
+.arrow-left
+	right: 65px
+	&:before
+		background: url(../img/svg/arrow_left.svg)
+.arrow-right
+	right: 0
+	&:before
+		background: url(../img/svg/arrow_right.svg)
 .popup__wrp
 	padding: 130px 0 80px
 	height: 100%
