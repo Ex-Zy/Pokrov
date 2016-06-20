@@ -108,8 +108,8 @@ strong { display: block; font-family: "ITCNewVeljovicDSPro", sans-serif; font-we
 p { font-family: "ITCNewVeljovicDSPro", sans-serif; color: #4a4a4a; font-size: 16px; }
 p:not(:last-of-type) { margin-bottom: 20px; }
 
-.inner, .l-layout { max-width: 960px; width: 100%; margin: auto; *zoom: 1; }
-.inner:after, .l-layout:after { content: " "; display: table; clear: both; }
+.inner, .l-layout, .popup__content { max-width: 960px; width: 100%; margin: auto; *zoom: 1; }
+.inner:after, .l-layout:after, .popup__content:after { content: " "; display: table; clear: both; }
 
 .inner-r { float: right; max-width: 1160px; width: 100%; *zoom: 1; }
 .inner-r:after { content: " "; display: table; clear: both; }
@@ -257,10 +257,11 @@ p:not(:last-of-type) { margin-bottom: 20px; }
 .popup__overlay { position: absolute; top: 0; right: 0; bottom: 0; left: 0; background-color: rgba(0, 0, 0, 0.7); }
 
 .popup__main { display: inline-block; overflow-y: auto; overflow-x: hidden; width: 100%; text-align: left; background-color: #fff; position: relative; z-index: 1; }
+.popup__main_space { padding-top: 50px; }
 
 .popup__col { display: inline-block; vertical-align: top; width: 50%; }
 
-.popup__content { max-width: 1210px; width: 100%; float: right; }
+.popup__side { float: right; max-width: 590px; height: auto; }
 
 .popup__wrp { padding: 130px 0 80px; height: 100%; max-width: 1360px; margin: auto; }
 

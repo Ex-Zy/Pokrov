@@ -51,6 +51,8 @@ $(document).ready(function() {
 			fade: true,
 			cssEase: 'linear',
 			asNavFor: '.js-slider-pic',
+			prevArrow: '.js-slider-pop-text-prev',
+			nextArrow: '.js-slider-pop-text-next'
 		});
 
 		return false;
