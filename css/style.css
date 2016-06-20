@@ -259,9 +259,22 @@ p:not(:last-of-type) { margin-bottom: 20px; }
 .popup__main { display: inline-block; overflow-y: auto; overflow-x: hidden; width: 100%; text-align: left; background-color: #fff; position: relative; z-index: 1; }
 .popup__main_space { padding-top: 50px; }
 
-.popup__col { display: inline-block; vertical-align: top; width: 50%; }
+.popup__col { display: inline-block; vertical-align: top; width: 50%; position: relative; height: 100%; }
 
 .popup__side { float: right; max-width: 590px; height: auto; }
+
+.popup__content { height: 100%; position: relative; }
+.popup__content .arrow-left { left: 330px; }
+.popup__content .arrow-right { left: 395px; }
+
+.arrow { width: 65px; height: 65px; background-color: #FFF; cursor: pointer; position: absolute; bottom: 0; font: 0/0 a; text-shadow: none; color: transparent; }
+.arrow:before { content: ""; display: block; position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%); width: 8px; height: 17px; }
+
+.arrow-left { right: 65px; }
+.arrow-left:before { background: url(../img/svg/arrow_left.svg); }
+
+.arrow-right { right: 0; }
+.arrow-right:before { background: url(../img/svg/arrow_right.svg); }
 
 .popup__wrp { padding: 130px 0 80px; height: 100%; max-width: 1360px; margin: auto; }
 

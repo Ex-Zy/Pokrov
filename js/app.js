@@ -60,23 +60,23 @@ $(document).ready(function() {
 			dots: false,
 			arrows: false,
 			infinite: true,
-			speed: 1200,
+			speed: 600,
 			slidesToShow: 1,
 			slidesToScroll: 1,
-			asNavFor: '.js-slider-text',
+			asNavFor: '.js-slider-pop-text',
 		});
 
 		$('.js-slider-pop-text').on('init', function (){}).slick({
 			dots: false,
 			infinite: true,
-			speed: 1200,
+			speed: 600,
 			slidesToShow: 1,
 			slidesToScroll: 1,
 			fade: true,
 			cssEase: 'linear',
-			asNavFor: '.js-slider-pic',
-			prevArrow: '.js-slider-pop-text-prev',
-			nextArrow: '.js-slider-pop-text-next'
+			asNavFor: '.js-slider-pop-pic',
+			prevArrow: '.js-arrow-prev',
+			nextArrow: '.js-arrow-next'
 		});
 
 		return false;
