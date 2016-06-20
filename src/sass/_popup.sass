@@ -29,14 +29,18 @@
 	background-color: $color-white-1
 	position: relative
 	z-index: 1
+	&_space
+		padding-top: 50px
 .popup__col
 	display: inline-block
 	vertical-align: top
 	width: 50%
-.popup__content
-	max-width: 1210px
-	width: 100%
+.popup__side
 	float: right
+	max-width: 590px
+	height: auto
+.popup__content
+	@extend %wrp
 .popup__wrp
 	padding: 130px 0 80px
 	height: 100%
