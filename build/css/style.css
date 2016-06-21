@@ -261,9 +261,9 @@ p:not(:last-of-type) { margin-bottom: 20px; }
 
 .popup__col { display: inline-block; vertical-align: top; width: 50%; position: relative; height: 100%; }
 
-.popup__side { float: right; max-width: 590px; height: auto; }
+.popup__side { float: right; max-width: 590px; height: auto; margin-right: -39.58333%; }
 
-.popup__content { height: 100%; position: relative; }
+.popup__content { margin-left: -webkit-calc((100% - 960px) / 2); margin-left: calc((100% - 960px) / 2); height: 100%; position: relative; }
 .popup__content .arrow-left { left: 330px; }
 .popup__content .arrow-right { left: 395px; }
 
