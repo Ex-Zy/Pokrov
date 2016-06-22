@@ -1,4 +1,4 @@
-$(document).ready(function() {
+ $(document).ready(function() {
 	//sliders
 	$('.js-slider-text').slick({
 		dots: false,
@@ -49,6 +49,11 @@ $(document).ready(function() {
 		});
 
 		$('.slide-index__total').text(total);
+		var currentSlide;
+		sliderText.on("init", function(slick) {
+			var currentSlide = $('.js-slider-pop-text').find('.slick-current.slick-active').data('slick-index') + 1;
+			currentBlock.text(currentSlide);
+		});
 
 		sliderText.slick({
 			dots: false,
@@ -62,6 +67,8 @@ $(document).ready(function() {
 			prevArrow: '.js-arrow-prev',
 			nextArrow: '.js-arrow-next',
 		});
+
+		
 
 		sliderText.on('afterChange', function() {
 			var currentSlide = $('.js-slider-pop-text').find('.slick-current.slick-active').data('slick-index') + 1;
