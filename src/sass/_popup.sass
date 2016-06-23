@@ -40,14 +40,9 @@
 .popup__side
 	float: right
 	max-width: 590px
-	// width: 43.38235294117647%
-	//width: 61.458333333333336%
 	height: auto
-	margin-right: -39.58333333333333%
 .popup__content
 	@extend %wrp
-	margin-left: calc((100% - 960px) / 2)
-	height: 100%
 	position: relative
 	.arrow-left
 		left: 330px
@@ -152,3 +147,15 @@
 	text-align: center
 	padding: 20px 0
 	opacity: 0
+.slide-index
+	display: inline-block
+	position: absolute
+	left: 60px
+	bottom: 16px
+	+md
+	font-size: 26px
+	line-height: 1
+	color: rgba(74,74,74,0.25)
+	&__current
+		font-size: 56px
+		color: $color-dark-1

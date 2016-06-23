@@ -261,9 +261,9 @@ p:not(:last-of-type) { margin-bottom: 20px; }
 
 .popup__col { display: inline-block; vertical-align: top; width: 50%; position: relative; height: 100%; }
 
-.popup__side { float: right; max-width: 590px; height: auto; margin-right: -39.58333%; }
+.popup__side { float: right; max-width: 590px; height: auto; }
 
-.popup__content { margin-left: -webkit-calc((100% - 960px) / 2); margin-left: calc((100% - 960px) / 2); height: 100%; position: relative; }
+.popup__content { position: relative; }
 .popup__content .arrow-left { left: 330px; }
 .popup__content .arrow-right { left: 395px; }
 
@@ -294,9 +294,10 @@ p:not(:last-of-type) { margin-bottom: 20px; }
 
 .sign { font-size: 16px; color: #4a4a4a; font-family: "ITCNewVeljovicProCnMd", serif; line-height: 1; text-align: center; padding: 20px 0; opacity: 0; }
 
+.slide-index { display: inline-block; position: absolute; left: 60px; bottom: 16px; font-family: "ITCNewVeljovicProCnMd", serif; font-size: 26px; line-height: 1; color: rgba(74, 74, 74, 0.25); }
+.slide-index__current { font-size: 56px; color: #4a4a4a; }
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px){
  *{ -webkit-text-size-adjust: none; } }
-
 @media only screen and (max-width: 1200px){
  .contacts__map{ width: 61.45833%; height: auto; }
  .contacts__map:before{ content: ""; display: block; padding-bottom: 100%; } }
