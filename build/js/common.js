@@ -27,31 +27,33 @@
 	$(".js-open-popup").on("click", function(){
 
 		var link  = $(this).data('link'),
-		    popup = $('.js-popup[data-popup="' + link + '"]'),
-		    sliderText = $('.js-slider-pop-text'),
-		    sliderPic = $('.js-slider-pop-pic'),
-		    total = $('.slider-pop-text__item').length,
-		    currentBlock = $('.slide-index__current');
+			popup = $('.js-popup[data-popup="' + link + '"]'),
+			sliderText = popup.find('.js-slider-pop-text'),
+			sliderPic = popup.find('.js-slider-pop-pic'),
+			total = popup.find('.slider-pop-text__item').length,
+			currentBlock = $('.slide-index__current');
 
 
 		$("body").addClass('is-hidden');
 
 		popup.addClass('is-active');
 
-		sliderPic.on('init', function (){}).slick({
+		sliderPic.slick({
 			dots: false,
 			arrows: false,
 			infinite: true,
 			speed: 600,
 			slidesToShow: 1,
 			slidesToScroll: 1,
-			asNavFor: '.js-slider-pop-text',
+			asNavFor: sliderText,
 		});
 
 		$('.slide-index__total').text(total);
+
 		var currentSlide;
+
 		sliderText.on("init", function(slick) {
-			var currentSlide = $('.js-slider-pop-text').find('.slick-current.slick-active').data('slick-index') + 1;
+			var currentSlide = sliderText.find('.slick-current.slick-active').data('slick-index') + 1;
 			currentBlock.text(currentSlide);
 		});
 
@@ -63,24 +65,27 @@
 			slidesToScroll: 1,
 			fade: true,
 			cssEase: 'linear',
-			asNavFor: '.js-slider-pop-pic',
+			asNavFor: sliderPic,
 			prevArrow: '.js-arrow-prev',
-			nextArrow: '.js-arrow-next',
+			nextArrow: '.js-arrow-next'
 		});
 
-		
-
 		sliderText.on('afterChange', function() {
-			var currentSlide = $('.js-slider-pop-text').find('.slick-current.slick-active').data('slick-index') + 1;
+			var currentSlide = sliderText.find('.slick-current.slick-active').data('slick-index') + 1;
 			currentBlock.text(currentSlide);
 		})
 
+		console.log(sliderText);
+		console.log(sliderPic);
+
 		return false;
 	});
+
 	$(".js-close").on("click", function(){
 		$(this).parents(".js-popup").removeClass('is-active');
 		$("body").removeClass('is-hidden');
 	});
+
 	//MAP
 	var map,
 		idMap = document.getElementById('map');
@@ -120,6 +125,7 @@
 
 
 	}
+
 	if(idMap) {
 		initMap();
 	}
