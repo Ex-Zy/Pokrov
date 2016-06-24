@@ -48,6 +48,9 @@
 	h3
 		// max-width: 352px
 		padding: 0 $space 0 0
+		font-size: $font-medium
+		+md
+		font-weight: normal
 	img
 		width: 100%
 		display: block
@@ -107,21 +110,32 @@
 	background: url(../img/services_image.jpg)
 	min-height: 250px
 	+cover
+	+r(420)
+		display: none
 .services
-	padding-top: $space
+	padding-top: $space-triple
 	padding-bottom: 150px
+	+r(420)
+		padding: $space-triple 0
+		padding-left: 30px
 .services__list
 	font-size: 0
-	width: 100%
 	+clr
 	margin-left: 10%
+	+r(420)
+		margin: 0
 .services__list-item
 	float: left
 	width: 50%
-	margin-top: $space-double
+	&:not(:last-child)
+		margin-bottom: $space-double
+	+r(420)
+		width: 100%
 	h3
 		max-width: 352px
 		margin-bottom: 0
+		+r(420)
+			font-size: 26px
 	a
 		color: $color-dark-1
 		text-transform: uppercase
@@ -133,11 +147,19 @@
 		float: left
 		margin-right: 12%
 		margin-top: $space-double
+		+r(420)
+			width: 100%
+			float: none
+			margin: 0
 	&__text
 		margin-bottom: $space-double
 	&__pic
 		width: 50%
 		float: right
+		+r(420)
+			float: none
+			width: 100%
+			margin-bottom: $space-double
 		img
 			width: 100%
 			display: block
@@ -154,6 +176,10 @@
 		width: 27%
 		float: left
 		margin-right: 23%
+		+r(420)
+			width: 100%
+			margin: 0
+			float: none
 	&__title
 		h2
 			margin-bottom: 0
@@ -161,6 +187,10 @@
 	&__pic
 		width: 50%
 		float: right
+		+r(420)
+			width: 100%
+			float: none
+			margin-bottom: 30px
 		img
 			width: 100%
 			display: block
@@ -169,30 +199,46 @@
 		margin-bottom: 30px
 .contacts
 	+clr
+	+r(420)
+		padding-top: $space-triple
 	&__content
 		width: 27%
 		float: left
 		margin-top: 117px
+		+r(420)
+			width: 100%
+			margin: 0
+			margin-bottom: $space-double
+			padding-left: 30px
 		p
 			font-size: $font-small
 			margin-bottom: 18px
+			+r(420)
+				font-size: 26px
 		adress
 			font-size: $font-medium
 			font-weight: normal
 			color: $color-dark-1
-			+pro
+			+md
+			+r(420)
+				font-size: 26px
 	&__adr
 		margin-bottom: 80px
+		+r(420)
+			margin-bottom: 30px
 	&__info
 		a
 			margin-bottom: 10px
 			display: block
 		span
-			display: block
+			display: inline-block
 			font-size: $font-medium
 			font-weight: normal
 			+pro
 			color: $color-dark-1
+			+r(420)
+				display: block
+				font-size: 26px
 	&__map
 		// width: 50%
 		float: right
@@ -206,6 +252,8 @@
 				content: ''
 				display: block
 				padding-bottom: 100%
+		+r(420)
+			width: 100%
 .slider-wrp
 	width: 770px
 	position: relative

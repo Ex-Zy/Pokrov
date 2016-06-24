@@ -92,7 +92,7 @@ html { -webkit-box-sizing: border-box; box-sizing: border-box; }
 .footer__r { float: right; width: 300px; }
 .footer__c { overflow: hidden; padding: 0 110px 0 100px; }
 .footer__l { float: left; width: 220px; }
-.footer span { display: block; }
+.footer span { display: inline-block; }
 
 .copy { color: #3c3c3c; font-size: 13px; text-transform: none; font-family: "ITCNewVeljovicDSPro", sans-serif; }
 
@@ -160,7 +160,7 @@ p:not(:last-of-type) { margin-bottom: 20px; }
 .item-list:after { content: " "; display: table; clear: both; }
 
 .item { float: left; width: 56%; margin-left: 0.5%; margin-bottom: 50px; }
-.item h3 { padding: 0 20px 0 0; }
+.item h3 { padding: 0 20px 0 0; font-size: 20px; font-family: "ITCNewVeljovicProCnMd", serif; font-weight: normal; }
 .item img { width: 100%; display: block; height: auto; }
 .item a { text-transform: uppercase; text-decoration: none; color: #4a4a4a; }
 .item__pic { margin-bottom: 33px; min-height: 31.25%; }
@@ -181,12 +181,13 @@ p:not(:last-of-type) { margin-bottom: 20px; }
 
 .services_intro { background: url(../img/services_image.jpg); min-height: 250px; background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; }
 
-.services { padding-top: 20px; padding-bottom: 150px; }
+.services { padding-top: 60px; padding-bottom: 150px; }
 
-.services__list { font-size: 0; width: 100%; *zoom: 1; margin-left: 10%; }
+.services__list { font-size: 0; *zoom: 1; margin-left: 10%; }
 .services__list:after { content: " "; display: table; clear: both; }
 
-.services__list-item { float: left; width: 50%; margin-top: 40px; }
+.services__list-item { float: left; width: 50%; }
+.services__list-item:not(:last-child) { margin-bottom: 40px; }
 .services__list-item h3 { max-width: 352px; margin-bottom: 0; }
 .services__list-item a { color: #4a4a4a; text-transform: uppercase; text-decoration: none; }
 
@@ -213,10 +214,10 @@ p:not(:last-of-type) { margin-bottom: 20px; }
 .contacts:after { content: " "; display: table; clear: both; }
 .contacts__content { width: 27%; float: left; margin-top: 117px; }
 .contacts__content p { font-size: 14px; margin-bottom: 18px; }
-.contacts__content adress { font-size: 20px; font-weight: normal; color: #4a4a4a; font-family: "ITCNewVeljovicDSPro", sans-serif; }
+.contacts__content adress { font-size: 20px; font-weight: normal; color: #4a4a4a; font-family: "ITCNewVeljovicProCnMd", serif; }
 .contacts__adr { margin-bottom: 80px; }
 .contacts__info a { margin-bottom: 10px; display: block; }
-.contacts__info span { display: block; font-size: 20px; font-weight: normal; font-family: "ITCNewVeljovicDSPro", sans-serif; color: #4a4a4a; }
+.contacts__info span { display: inline-block; font-size: 20px; font-weight: normal; font-family: "ITCNewVeljovicDSPro", sans-serif; color: #4a4a4a; }
 .contacts__map { float: right; max-width: 590px; width: 100%; height: 680px; }
 
 .slider-wrp { width: 770px; position: relative; }
@@ -310,18 +311,38 @@ p:not(:last-of-type) { margin-bottom: 20px; }
  .header{ margin-bottom: 0; }
  .header__in{ padding: 22px 25px; }
  .header__logo{ float: none; padding: 0; }
- .mobile-menu{ float: right; display: block; width: 24px; height: 30px; background-color: transparent; border: 0; outline: 0; top: 0; right: 0; padding: 0; cursor: pointer; position: absolute; z-index: 222; }
+ .mobile-menu{ display: block; width: 24px; height: 30px; background-color: transparent; border: 0; outline: 0; top: 13px; right: 25px; padding: 0; cursor: pointer; position: absolute; z-index: 222; }
  .mobile-menu span{ display: block; width: 100%; height: 3px; background-color: #000; position: relative; }
  .mobile-menu:before, .mobile-menu:after{ content: " "; display: block; width: 24px; height: 3px; top: 0; left: 0; background-color: #000; position: absolute; }
  .mobile-menu:after{ top: 25px; }
  .nav{ display: none; }
- .footer .inner{ padding: 40px 0; }
- .footer__r{ float: none; }
- .footer__c{ padding: 0; }
- .footer__l{ float: none; }
+ .footer{ padding-left: 30px; }
+ .footer .inner{ padding: 40px 0; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -webkit-flex-direction: column; -ms-flex-direction: column; flex-direction: column; }
+ .footer__r{ float: none; -webkit-box-ordinal-group: 4; -webkit-order: 3; -ms-flex-order: 3; order: 3; }
+ .footer__c address{ font-size: 26px; }
+ .footer__c{ padding: 0; -webkit-box-ordinal-group: 3; -webkit-order: 2; -ms-flex-order: 2; order: 2; margin-bottom: 30px; }
+ .footer__l{ float: none; -webkit-box-ordinal-group: 2; -webkit-order: 1; -ms-flex-order: 1; order: 1; margin-bottom: 30px; }
+ .footer span{ display: block; font-size: 24px; }
+ .copy{ font-size: 18px; }
  .item-list{ margin: 0; }
  .item{ width: 100%; margin-left: 0; margin-bottom: 40px; }
- .item__content{ padding-left: 30px; } }
+ .item__content{ padding-left: 30px; }
+ .services_intro{ display: none; }
+ .services{ padding: 60px 0; padding-left: 30px; }
+ .services__list{ margin: 0; }
+ .services__list-item{ width: 100%; }
+ .services__list-item h3{ font-size: 26px; }
+ .technology__content{ width: 100%; float: none; margin: 0; }
+ .technology__pic{ float: none; width: 100%; margin-bottom: 40px; }
+ .news__content{ width: 100%; margin: 0; float: none; }
+ .news__pic{ width: 100%; float: none; margin-bottom: 30px; }
+ .contacts{ padding-top: 60px; }
+ .contacts__content{ width: 100%; margin: 0; margin-bottom: 40px; padding-left: 30px; }
+ .contacts__content p{ font-size: 26px; }
+ .contacts__content adress{ font-size: 26px; }
+ .contacts__adr{ margin-bottom: 30px; }
+ .contacts__info span{ display: block; font-size: 26px; }
+ .contacts__map{ width: 100%; } }
 
 
 
