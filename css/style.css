@@ -130,7 +130,8 @@ p:not(:last-of-type) { margin-bottom: 20px; }
 
 .h1 { text-transform: uppercase; font-size: 30px; margin-bottom: 40px; }
 
-.h3 { font-size: 20px; margin-bottom: 25px; }
+.h3 { font-size: 20px; }
+.h3:not(:last-child) { margin-bottom: 25px; }
 
 .data { font-family: "ITCNewVeljovicProCnMd", serif; color: #4a4a4a; font-size: 16px; font-weight: normal; opacity: 0.6; line-height: 1.38; }
 
@@ -330,11 +331,17 @@ p:not(:last-of-type) { margin-bottom: 20px; }
  .footer__l{ float: none; -webkit-box-ordinal-group: 2; -webkit-order: 1; -ms-flex-order: 1; order: 1; margin-bottom: 30px; }
  .footer span{ display: block; font-size: 24px; }
  .copy{ font-size: 18px; }
+ .article{ padding: 35px 20px 60px 20px; }
+ .article_center .h1{ padding: 0; margin-bottom: 30px; }
+ .article_center p{ font-size: 20px; }
  .gallery{ padding-bottom: 60px; }
+ .gallery .h1{ font-size: 27px; }
  .item-list{ margin: 0; }
  .item{ width: 100%; margin: 0; }
  .item:not(:last-child){ margin-bottom: 40px; }
  .item__content{ padding-left: 30px; }
+ .item .btn{ display: none; }
+ .item h3{ font-size: 27px; }
  .about{ padding-bottom: 60px; }
  .about__content{ width: 100%; padding: 0 30px; margin: 0; }
  .about__content .h4{ font-weight: 400; font-size: 18px; margin-bottom: 20px; }
@@ -370,6 +377,7 @@ p:not(:last-of-type) { margin-bottom: 20px; }
  .contacts__adr{ margin-bottom: 30px; }
  .contacts__info span{ display: block; font-size: 26px; }
  .contacts__map{ width: 100%; }
+ .slider-wrp{ display: none; }
  .category{ padding-top: 40px; padding-bottom: 60px; }
  .category .h1{ font-size: 26px; }
  .category p{ font-size: 20px; }
