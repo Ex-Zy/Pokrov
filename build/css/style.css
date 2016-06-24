@@ -310,6 +310,8 @@ p:not(:last-of-type) { margin-bottom: 20px; }
 @media only screen and (max-width: 1200px){
  .contacts__map{ width: 61.45833%; height: auto; }
  .contacts__map:before{ content: ""; display: block; padding-bottom: 100%; } }
+@media only screen and (max-width: 767px){
+ .album__list-item{ width: 33%; } }
 @media only screen and (max-width: 420px){
  .header{ margin-bottom: 0; }
  .header__in{ padding: 22px 25px; }
@@ -347,6 +349,7 @@ p:not(:last-of-type) { margin-bottom: 20px; }
  .services{ padding: 60px 45px 60px 30px; }
  .services__list{ margin: 0; }
  .services__list-item{ width: 100%; }
+ .services__list-item:not(:last-child){ margin-bottom: 40px; }
  .services__list-item h3{ font-size: 26px; }
  .technology{ padding-bottom: 60px; }
  .technology__content{ width: 100%; float: none; margin: 0; padding: 0 30px; }
@@ -366,7 +369,26 @@ p:not(:last-of-type) { margin-bottom: 20px; }
  .contacts__content adress{ font-size: 26px; }
  .contacts__adr{ margin-bottom: 30px; }
  .contacts__info span{ display: block; font-size: 26px; }
- .contacts__map{ width: 100%; } }
+ .contacts__map{ width: 100%; }
+ .category{ padding-top: 40px; padding-bottom: 60px; }
+ .category .h1{ font-size: 26px; }
+ .category p{ font-size: 20px; }
+ .category__content{ padding: 0 45px 0 30px; }
+ .category__text{ padding: 0 45px 0 30px; }
+ .album .h1{ font-size: 26px; }
+ .album{ padding-top: 20px; padding-bottom: 60px; }
+ .album__list-item{ width: 49.5%; margin-left: 0.5%; margin-bottom: 0.5%; }
+ .album__content{ padding: 0 45px 0 30px; }
+ .products p, .products strong{ font-size: 20px; }
+ .products h2{ font-size: 26px; }
+ .products{ padding-bottom: 60px; }
+ .products__content{ padding: 0 45px 0 30px; }
+ .products__text{ margin-bottom: 35px; }
+ .products__album{ margin-bottom: 40px; }
+ .products__album .album__list-item{ width: 49.5%; margin-left: 0.5%; margin-bottom: 0.5%; }
+ .products__guarantee{ padding: 0 45px 0 30px; }
+ .products__guarantee h3{ font-size: 18px; font-weight: 500; }
+ .products__guarantee p{ margin-bottom: 40px; } }
 
 
 

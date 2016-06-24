@@ -167,6 +167,8 @@
 		margin-bottom: $space-double
 	+r(420)
 		width: 100%
+		&:not(:last-child)
+			margin-bottom: $space-double
 	h3
 		max-width: 352px
 		margin-bottom: 0
@@ -360,16 +362,36 @@
 		color: rgba(74, 74, 74, 0.6)
 .category
 	padding-bottom: 80px
+	+r(420)
+		padding-top: $space-double
+		padding-bottom: $space-triple
+	.h1
+		+r(420)
+			font-size: 26px
+	p
+		+r(420)
+			font-size: $font-medium
 	img
 		width: 100%
 		height: auto
 		display: block
 	&__content
 		margin-bottom: $space-double
+		+r(420)
+			padding: 0 45px 0 30px
 	&__pic
 		margin-bottom: $space-double
+	&__text
+		+r(420)
+			padding: 0 45px 0 30px
 .album
 	padding-bottom: 80px
+	.h1
+		+r(420)
+			font-size: 26px
+	+r(420)
+		padding-top: $space
+		padding-bottom: $space-triple
 	&__list
 		font-size: 0
 		margin: 0 0 0 -0.5%
@@ -379,21 +401,61 @@
 		width: 24.7%
 		margin-left: 0.3%
 		margin-bottom: 0.3%
+		+r(767)
+			width: 33%
+		+r(420)
+			width: 49.5%
+			margin-left: 0.5%
+			margin-bottom: 0.5%
 		img
 			width: 100%
 			height: auto
 			display: block
+	&__content
+		+r(420)
+			padding: 0 45px 0 30px
 .products-intro
 	background: url(../img/services_category_01_slide_image.jpg)
 	min-height: 250px
 	+cover
 .products
 	padding: 40px 0 80px 0
+	p, strong
+		+r(420)
+			font-size: $font-medium
+	h2
+		+r(420)
+			font-size: 26px
+
+	+r(420)
+		padding-bottom: $space-triple
+	&__content
+		+r(420)
+			padding: 0 45px 0 30px
 	&__text
 		margin-bottom: 55px
+		+r(420)
+			margin-bottom: 35px
 	&__album
 		margin-bottom: $space-triple
+		+r(420)
+			margin-bottom: $space-double
 		.album__list
 			margin-bottom: $space-double
+		.album__list-item
+			+r(420)
+				width: 49.5%
+				margin-left: 0.5%
+				margin-bottom: 0.5%
 		.btn-c
 			text-align: center
+	&__guarantee
+		+r(420)
+			padding: 0 45px 0 30px
+		h3
+			+r(420)
+				font-size: 18px
+				font-weight: 500
+		p
+			+r(420)
+				margin-bottom: $space-double
