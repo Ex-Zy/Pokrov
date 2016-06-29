@@ -1,11 +1,12 @@
 // Normally mainpage styles 
 .out
 	max-width: 1360px
-	min-width: 320px
+	min-width: 300px
 	width: 100%
 	min-height: 100%
-	
 	margin: auto
+	+r(900)
+		padding-top: 59px
 .out_sticky-footer
 	&:after
 		content: ''
@@ -16,7 +17,7 @@
 	@extend %wrp
 .article
 	padding: 70px 0
-	+r(420)
+	+r(900)
 		padding: 35px 20px 60px 20px
 	&_center
 		text-align: center
@@ -25,11 +26,11 @@
 		margin: auto
 		.h1
 			padding: 0px 155px
-			+r(420)
+			+r(900)
 				padding: 0
 				margin-bottom: 30px
 		p
-			+r(420)
+			+r(900)
 				font-size: 20px
 	&__text
 		margin-bottom: $space-triple
@@ -53,27 +54,37 @@
 	float: left
 	width: 56%
 	margin-left: 0.5%
-	&:nth-child(-n+2)
-		margin-bottom: 50px
-	+r(420)
+	+rm(901)
+		&:nth-child(-n+2)
+			margin-bottom: 50px
+	+r(900)
+		width: 50%
+		margin-left: 0
+		margin-bottom: 30px
+		padding-left: 0.5%
+		min-height: 500px
+	+r(600)
 		width: 100%
+		padding-left: 0
+		min-height: auto
 		margin: 0
 		&:not(:last-child)
 			margin-bottom: $space-double
 	&__content
-		+r(420)
-			padding-left: 30px
+		+r(600)
+			padding: 0 30px
 	.btn
 		+r(420)
 			display: none
 	h3
-		// max-width: 352px
 		padding: 0 $space 0 0
 		font-size: $font-medium
 		+md
 		font-weight: normal
+		+r(900)
+			font-size: 26px
 		+r(420)
-			font-size: 27px
+			margin-bottom: 0 !important
 		a
 			color: $color-dark-1
 	img
@@ -83,8 +94,12 @@
 	a
 		text-decoration: none
 	&__pic
+		width: 100%
 		margin-bottom: 33px
-		min-height: 31.25%
+		min-height: 300px
+		display: block
+		background-size: cover !important
+		background-position: center 
 	&_width
 		width: 41%
 .about
@@ -336,6 +351,7 @@
 				padding-bottom: 100%
 		+r(420)
 			width: 100%
+			
 .slider
 	overflow: hidden
 .slider-wrp
@@ -343,12 +359,13 @@
 	position: relative
 	+r(1150)
 		width: 100%
-	+r(420)
-		display: none
 .slider-pic
 	&__item
 		background-size: cover
+		background-position: center 
 		height: 430px
+		+r(900)
+			height: 347px
 .slider-text
 	@extend %slide-t
 	position: absolute

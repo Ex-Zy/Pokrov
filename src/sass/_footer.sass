@@ -6,48 +6,51 @@
 	color: $color-dark-1
 	+md
 	font-size: $font-medium 
-	+r(420)
-		padding-left: 30px
 	.inner
 		padding: 22px 0
-		+r(420)
-			padding: 40px 0	
+		+r(740)
+			padding: 40px 30px
 			display: flex
 			flex-direction: column
 	&__r
 		float: right
-		width: 300px
-		+r(420)
-			float: none
+		max-width: 300px
+		+r(740)
 			order: 3
 	&__c
 		overflow: hidden
-		padding: 0 110px 0 100px
-		address
-			+r(420)
-				font-size: 26px
-		+r(420)
+		padding: 0 20px
+		max-width: 270px
+		margin: auto
+		+r(740)
 			padding: 0
 			order: 2
-			margin-bottom: 30px
+			address
+				font-size: 26px
 
 	&__l
 		float: left
-		width: 220px
-		+r(420)
-			float: none
+		max-width: 220px
+		+r(740)
 			order: 1
-			margin-bottom: 30px	
+	&__l,
+	&__c
+		+r(740)
+			margin: 0 0 30px
+	&__l,
+	&__r
+		+r(740)
+			float: none
 	span
 		display: inline-block
-		+r(420)
+		+r(740)
 			display: block
 			font-size: 24px
 .copy
 	color: $color-dark-2
 	font-size: 13px
 	text-transform: none
-	+r(420)
+	+r(740)
 		font-size: 18px
 	+pro
 .link-mail
