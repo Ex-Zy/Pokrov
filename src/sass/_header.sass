@@ -42,8 +42,9 @@
 		&.is-show
 			right: 0
 		+r(900)
-			overflow-x: hidden
-			overflow-y: auto
+			// overflow-x: hidden
+			// overflow-y: auto
+			overflow: visible
 			white-space: normal
 			text-align: right
 			top: 59px
@@ -61,13 +62,13 @@
 				left: 0
 				right: 0
 				margin: auto
-				padding-bottom: 30px
+				padding: 0 25px 30px
 				float: none
-			> .nav
+				max-width: none
 				.nav__link
-					padding-bottom: 10px
-					font-size: 20px
-					display: block
+					font-size: 16px
+					padding-bottom: 0
+					display: inline-block
 				
 .mobile-menu
 	display: none
@@ -128,7 +129,9 @@
 		cursor: pointer
 		padding-bottom: 15px
 		+r(900)
-			padding-bottom: 0
+			padding-bottom: 10px
+			color: #3d3834
+			font-size: 20px
 		+rm(901)
 			&:after
 				content: ''
