@@ -129,5 +129,9 @@
 	if(idMap) {
 		initMap();
 	}
-
+// // content-width
+// 	if ( $(window).width() > 960 ) {
+// 		var halfWidth = 480;
+// 		$('.technology__content').outerWidth(halfWidth);	
+// 	}
 });
