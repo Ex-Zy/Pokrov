@@ -1,6 +1,6 @@
 // Normally mainpage styles 
 .out
-	max-width: 1400px
+	// max-width: 1400px
 	width: 100%
 	min-height: 100%
 	margin: auto
@@ -194,19 +194,23 @@
 		text-transform: uppercase
 		text-decoration: none
 .technology
+	padding-bottom: 80px
 	+clr
 	+r(420)
 		padding-bottom: $space-triple
 	&__content
-		width: 38%
-		float: left
-		margin-right: 12%
+		float: right
+		max-width: 480px
+		padding-right: 5%
+		// margin-right: 12%
 		margin-top: $space-double
 		+r(420)
 			width: 100%
 			float: none
 			margin: 0
 			padding: 0 30px
+		+r(960)
+			width: 50%
 	&__text
 		margin-bottom: $space-double
 		p
@@ -291,6 +295,7 @@
 			margin-bottom: $space-double
 		p
 			font-size: $font-small
+			margin-bottom: 18px
 			+r(420)
 				font-size: 26px
 		adress
@@ -335,8 +340,6 @@
 .slider-wrp
 	width: 770px
 	position: relative
-	+r(420)
-		display: none
 .slider-pic
 	&__item
 		background-size: cover
