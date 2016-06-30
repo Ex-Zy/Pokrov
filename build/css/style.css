@@ -121,7 +121,7 @@ p:not(:last-of-type) { margin-bottom: 20px; }
 .inner, .l-layout, .popup__content { max-width: 960px; width: 100%; margin: auto; *zoom: 1; }
 .inner:after, .l-layout:after, .popup__content:after { content: " "; display: table; clear: both; }
 
-.btn { position: relative; display: inline-block; text-align: center; -webkit-border-radius: 100px; border-radius: 100px; padding: 11px 30px; text-decoration: none; color: #c3b091; background-color: #fff; border: 1px solid #c3b091; font-size: 12px; font-family: "MarkSimonsonProximaNovaAltCondensedSemibold", sans-serif; cursor: pointer; }
+.btn { position: relative; display: inline-block; text-align: center; -webkit-border-radius: 100px; border-radius: 100px; padding: 12px 30px 10px; text-decoration: none; color: #c3b091; background-color: #fff; border: 1px solid #c3b091; font-size: 12px; font-family: "MarkSimonsonProximaNovaAltCondensedSemibold", sans-serif; cursor: pointer; }
 
 .slider-text, .slider-pop-text { width: 460px; height: 300px; padding: 55px 60px; background-color: #fff; }
 
@@ -335,11 +335,11 @@ p:not(:last-of-type) { margin-bottom: 20px; }
  .header{ position: fixed; top: 0; left: 0; right: 0; z-index: 999; margin-bottom: 0; }
  .header__in{ padding: 23px 25px; }
  .header__switcher .nav__link{ font-size: 16px; }
- .header__nav{ overflow-x: hidden; overflow-y: auto; white-space: normal; text-align: right; top: 0; right: -100%; bottom: 0; width: 250px; background-color: #FFF; z-index: 100; position: fixed; padding: 0 25px; -webkit-transition: right 0.5s; transition: right 0.5s; }
+ .header__nav{ overflow-x: hidden; overflow-y: auto; white-space: normal; text-align: right; top: 59px; right: -100%; bottom: 0; width: 250px; background-color: #FFF; z-index: 100; position: fixed; padding: 0 25px; -webkit-transition: right 0.5s; transition: right 0.5s; }
  .header__nav .header__switcher{ position: absolute; bottom: 0; left: 0; right: 0; margin: auto; padding-bottom: 30px; float: none; }
  .header__nav > .nav .nav__link{ padding-bottom: 10px; font-size: 20px; display: block; }
  .mobile-menu{ display: block; }
- .nav{ display: block; padding: 137px 0; }
+ .nav{ display: block; padding: 77px 0; }
  .nav__link{ padding-bottom: 0; }
  .out{ padding-top: 59px; }
  .article{ padding: 35px 20px 60px 20px; }
