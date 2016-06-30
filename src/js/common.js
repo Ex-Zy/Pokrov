@@ -1,4 +1,9 @@
  $(document).ready(function() {
+ 	//menu
+ 	$('.js-menu').click(function() {
+ 		$(this).toggleClass('is-open');
+ 		$('.header__nav').toggleClass('is-show');
+ 	});
 	//sliders
 	$('.js-slider-text').slick({
 		dots: false,

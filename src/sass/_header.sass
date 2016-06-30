@@ -1,73 +1,123 @@
 .header
 	position: relative
 	margin-bottom: 30px
-	+r(420)
+	background-color: #FFF 
+	+r(900)
+		position: fixed
+		top: 0
+		left: 0
+		right: 0
+		z-index: 999
 		margin-bottom: 0
-	+clr
 	&__in
 		padding: 14px 50px 2px
-		+r(420)
-			padding: 22px 25px
+		+clr
+		+r(1200)
+			padding: 14px 25px 2px
+		+r(900)
+			padding: 23px 25px
 	&__logo
-		width: $width-col-header
+		max-width: $width-col-header
 		float: left
 		font-size: 0
 		line-height: 1
-		padding-top: 6px
+		+rm(901)
+			padding-top: 6px
 		+r(420)
 			float: none
 			padding: 0
 	&__switcher
-		width: $width-col-header
+		max-width: $width-col-header
 		float: right
 		text-align: right
+		.nav
+			padding: 0
+		+r(900)
+			.nav__link
+				font-size: 16px
 	&__nav
 		overflow: hidden
 		text-align: center
 		white-space: nowrap
+		&.is-show
+			right: 0
+		+r(900)
+			overflow-x: hidden
+			overflow-y: auto
+			white-space: normal
+			text-align: right
+			top: 0
+			right: -100%
+			bottom: 0
+			width: 250px
+			background-color: #FFF
+			z-index: 100
+			position: fixed
+			padding: 0 25px
+			+tr(right 0.5s)
+			.header__switcher
+				position: absolute
+				bottom: 0
+				left: 0
+				right: 0
+				margin: auto
+				padding-bottom: 30px
+				float: none
+			> .nav
+				.nav__link
+					padding-bottom: 10px
+					font-size: 20px
+					display: block
+				
 .mobile-menu
 	display: none
-	+r(420)
-		display: block
-		width: 24px
-		height: 30px
-		background-color: transparent
-		border: 0
-		outline: 0
-		top: 13px
-		right: 25px
-		padding: 0
-		cursor: pointer
-		position: absolute
-		z-index: 222
+	width: 20px
+	height: 14px
+	background-color: transparent
+	top: 0
+	right: 25px
+	bottom: 0
+	margin: auto
+	cursor: pointer
+	position: absolute
+	z-index: 222
+	&.is-open
 		span
-			display: block
-			width: 100%
-			height: 2px
-			background-color: #000
-			position: relative
-		&:before,
-		&:after
-			content: " "
-			display: block
-			width: 24px
-			height: 2px
-			top: 0
-			left: 0
-			background-color: #000
-			position: absolute
-		&:after 
-			top: 20px
+			opacity: 0
 		&:before
-			top: 8px
-
+			+rotate(45)
+		&:after
+			+rotate(-45)
+	+r(900)
+		display: block
+	span,
+	&:before,
+	&:after
+		display: block
+		width: 20px
+		height: 2px
+		background-color: #000
+	&:before,
+	&:after
+		content: ""
+		position: absolute
+		left: 0
+		+tr(all 0.3s)
+	&:after 
+		bottom: 0
+		transform-origin: 3px -1px
+	&:before
+		top: 0
+		transform-origin: 2px 4px
 .logo
 	display: inline-block
 .nav
 	display: inline-block
 	font-size: 0
-	+r(420)
-		display: none
+	padding: 0 30px
+	+r(900)
+		display: block
+		padding: 137px 0
 	&__link
 		font-size: $font-small-x
 		display: inline-block
@@ -77,15 +127,18 @@
 		position: relative
 		cursor: pointer
 		padding-bottom: 15px
-		&:after
-			content: ''
-			display: block
-			position: absolute
-			bottom: 0px
-			left: 0
-			right: 0
-			border-bottom: 2px solid transparent
-			+tr(all 0.3s)
+		+r(900)
+			padding-bottom: 0
+		+rm(901)
+			&:after
+				content: ''
+				display: block
+				position: absolute
+				bottom: 0px
+				left: 0
+				right: 0
+				border-bottom: 2px solid transparent
+				+tr(all 0.3s)
 		+ .nav__link
 			margin-left: 30px
 		&:hover, &.is-active
