@@ -121,9 +121,6 @@ p:not(:last-of-type) { margin-bottom: 20px; }
 .inner, .l-layout, .popup__content { max-width: 960px; width: 100%; margin: auto; *zoom: 1; }
 .inner:after, .l-layout:after, .popup__content:after { content: " "; display: table; clear: both; }
 
-.inner-r { float: right; max-width: 1160px; width: 100%; *zoom: 1; }
-.inner-r:after { content: " "; display: table; clear: both; }
-
 .btn { position: relative; display: inline-block; text-align: center; -webkit-border-radius: 100px; border-radius: 100px; padding: 11px 30px; text-decoration: none; color: #c3b091; background-color: #fff; border: 1px solid #c3b091; font-size: 12px; font-family: "MarkSimonsonProximaNovaAltCondensedSemibold", sans-serif; cursor: pointer; }
 
 .slider-text, .slider-pop-text { width: 460px; height: 300px; padding: 55px 60px; background-color: #fff; }
@@ -133,6 +130,8 @@ p:not(:last-of-type) { margin-bottom: 20px; }
 .btn:active { background-color: #baa481; color: #fff; }
 
 .link { text-decoration: underline; font-size: 12px; font-family: "MarkSimonsonProximaNovaAltCondensedSemibold", sans-serif; font-weight: normal; color: #c3b091; }
+
+.col_left { max-width: 480px; float: right; padding-right: 80px; }
 
 .h1, .h2, .h3 { font-family: "ITCNewVeljovicProCnMd", serif; color: #4a4a4a; font-weight: normal; }
 
@@ -154,11 +153,7 @@ p:not(:last-of-type) { margin-bottom: 20px; }
 .pages-list a { color: black; text-decoration: none; font-weight: 900; }
 .pages-list a:hover { text-decoration: underline; }
 
-<<<<<<< HEAD
-.out { width: 100%; min-height: 100%; margin: auto; }
-=======
-.out { max-width: 1360px; min-width: 300px; width: 100%; min-height: 100%; margin: auto; }
->>>>>>> db5b03a4c08132d57b1ac1624df88326c2664b2d
+.out { min-width: 300px; width: 100%; min-height: 100%; margin: auto; }
 
 .out_sticky-footer:after { content: ""; display: block; height: 92px; margin: 0 auto -92px; }
 
@@ -181,9 +176,10 @@ p:not(:last-of-type) { margin-bottom: 20px; }
 .item__pic { width: 100%; margin-bottom: 33px; min-height: 300px; display: block; background-size: cover !important; background-position: center; }
 .item_width { width: 41%; }
 
-.about { padding-bottom: 80px; *zoom: 1; }
+.about { *zoom: 1; padding-bottom: 80px; *zoom: 1; }
 .about:after { content: " "; display: table; clear: both; }
-.about__content { width: 40%; float: left; margin-top: 40px; margin-right: 10%; }
+.about:after { content: " "; display: table; clear: both; }
+.about__content { margin-top: 40px; }
 .about__pic { width: 50%; float: right; }
 .about__text { margin-bottom: 60px; }
 .about__pic img { width: 100%; height: auto; display: block; }
@@ -208,7 +204,7 @@ p:not(:last-of-type) { margin-bottom: 20px; }
 
 .technology { padding-bottom: 80px; *zoom: 1; }
 .technology:after { content: " "; display: table; clear: both; }
-.technology__content { float: right; max-width: 480px; padding-right: 5%; margin-top: 40px; }
+.technology__content { margin-top: 40px; }
 .technology__text { margin-bottom: 40px; }
 .technology__pic { width: 50%; float: right; }
 .technology__pic img { width: 100%; display: block; height: auto; }
@@ -218,7 +214,7 @@ p:not(:last-of-type) { margin-bottom: 20px; }
 .news__col { *zoom: 1; }
 .news__col:after { content: " "; display: table; clear: both; }
 .news__col:not(:last-child) { margin-bottom: 60px; }
-.news__content { margin-top: 20px; width: 27%; float: left; margin-right: 23%; }
+.news__content { margin-top: 20px; padding-right: 168px; }
 .news__title { margin-bottom: 20px; }
 .news__title h2 { margin-bottom: 0; }
 .news__pic { width: 50%; float: right; }
@@ -229,7 +225,7 @@ p:not(:last-of-type) { margin-bottom: 20px; }
 .contacts { *zoom: 1; }
 .contacts:after { content: " "; display: table; clear: both; }
 .contacts p { margin: 0; }
-.contacts__content { width: 27%; float: left; margin-top: 117px; }
+.contacts__content { margin-top: 117px; }
 .contacts__content .copy { margin-bottom: 40px; }
 .contacts__content p { font-size: 14px; margin-bottom: 18px; }
 .contacts__content adress { font-size: 20px; font-weight: normal; color: #4a4a4a; font-family: "ITCNewVeljovicProCnMd", serif; }
@@ -326,13 +322,11 @@ p:not(:last-of-type) { margin-bottom: 20px; }
  .item-list{ margin: 0; }
  .contacts__map{ width: 61.45833%; height: auto; }
  .contacts__map:before{ content: ""; display: block; padding-bottom: 100%; } }
-<<<<<<< HEAD
-@media only screen and (max-width: 960px){
- .technology__content{ width: 50%; } }
-=======
 @media only screen and (max-width: 1150px){
  .slider-wrp{ width: 100%; }
  .slider-text{ display: none; } }
+@media only screen and (max-width: 960px){
+ .technology__content{ width: 50%; } }
 @media only screen and (min-width: 901px){
  .header__logo{ padding-top: 6px; }
  .nav__link:after{ content: ""; display: block; position: absolute; bottom: 0px; left: 0; right: 0; border-bottom: 2px solid transparent; -webkit-transition: all 0.3s; transition: all 0.3s; }
@@ -354,7 +348,6 @@ p:not(:last-of-type) { margin-bottom: 20px; }
  .item{ width: 50%; margin-left: 0; margin-bottom: 30px; padding-left: 0.5%; min-height: 500px; }
  .item h3{ font-size: 26px; }
  .slider-pic__item{ height: 347px; } }
->>>>>>> db5b03a4c08132d57b1ac1624df88326c2664b2d
 @media only screen and (max-width: 767px){
  .album__list-item{ width: 33%; } }
 @media only screen and (max-width: 740px){
