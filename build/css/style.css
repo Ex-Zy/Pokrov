@@ -234,7 +234,7 @@ img { width: 100%; height: auto; display: block; }
 .contacts__adr { margin-bottom: 80px; }
 .contacts__info a { margin-bottom: 10px; display: block; }
 .contacts__info span { display: inline-block; font-size: 20px; font-weight: normal; font-family: "ITCNewVeljovicDSPro", sans-serif; color: #4a4a4a; }
-.contacts__map { width: 50%; float: right; height: 680px; }
+.contacts__map { width: 50%; float: right; height: -webkit-calc(100vh - 80px); height: calc(100vh - 80px); }
 
 .slider { overflow: hidden; }
 
