@@ -135,8 +135,6 @@ img { width: 100%; height: auto; display: block; }
 
 .col-left { max-width: 480px; float: right; padding-right: 80px; }
 
-.col-right { float: right; width: 50%; }
-
 .h1, .h2, .h3 { font-family: "ITCNewVeljovicProCnMd", serif; color: #4a4a4a; font-weight: normal; }
 
 .h1 { text-transform: uppercase; font-size: 30px; margin-bottom: 40px; }
@@ -184,6 +182,7 @@ img { width: 100%; height: auto; display: block; }
 .about:after { content: " "; display: table; clear: both; }
 .about:after { content: " "; display: table; clear: both; }
 .about__content { margin-top: 40px; }
+.about__pic { width: 50%; float: right; }
 .about__text { margin-bottom: 60px; }
 .about__pic img { width: 100%; height: auto; display: block; }
 .about__list { margin-bottom: 60px; }
@@ -209,6 +208,8 @@ img { width: 100%; height: auto; display: block; }
 .technology:after { content: " "; display: table; clear: both; }
 .technology__content { margin-top: 40px; }
 .technology__text { margin-bottom: 40px; }
+.technology__pic { width: 50%; float: right; }
+.technology__pic img { width: 100%; display: block; height: auto; }
 
 .news { *zoom: 1; padding-bottom: 80px; }
 .news:after { content: " "; display: table; clear: both; }
@@ -218,6 +219,8 @@ img { width: 100%; height: auto; display: block; }
 .news__content { margin-top: 20px; padding-right: 168px; }
 .news__title { margin-bottom: 20px; }
 .news__title h2 { margin-bottom: 0; }
+.news__pic { width: 50%; float: right; }
+.news__pic img { width: 100%; display: block; height: auto; }
 .news__desc { margin-bottom: 30px; }
 .news__desc p { opacity: 0.6; }
 
@@ -325,6 +328,7 @@ img { width: 100%; height: auto; display: block; }
  .slider-wrp{ width: 100%; }
  .slider-text{ display: none; } }
 @media only screen and (max-width: 960px){
+ .col-left{ width: 50%; }
  .technology__content{ width: 50%; } }
 @media only screen and (min-width: 901px){
  .header__logo{ padding-top: 6px; }
@@ -373,6 +377,7 @@ img { width: 100%; height: auto; display: block; }
  .about{ padding-bottom: 60px; }
  .about__content{ width: 100%; padding: 0 30px; margin: 0; }
  .about__content .h4{ font-weight: 400; font-size: 18px; margin-bottom: 20px; }
+ .about__pic{ float: none; width: 100%; margin-bottom: 40px; }
  .about__text{ margin-bottom: 40px; }
  .about__text p{ margin: 0; font-size: 20px; }
  .about__list{ margin-bottom: 30px; }
@@ -389,11 +394,13 @@ img { width: 100%; height: auto; display: block; }
  .technology__content{ width: 100%; float: none; margin: 0; padding: 0 30px; }
  .technology__text p{ font-size: 20px; }
  .technology .btn{ left: 15%; }
+ .technology__pic{ float: none; width: 100%; margin-bottom: 40px; }
  .news{ padding-bottom: 60px; }
  .news__col:not(:last-child){ margin-bottom: 80px; }
  .news__content{ width: 100%; margin: 0; float: none; padding: 0 30px; }
  .news__content .data{ font-size: 20px; }
  .news__content .btn{ left: 15%; }
+ .news__pic{ width: 100%; float: none; margin-bottom: 30px; }
  .news__desc p{ font-size: 20px; }
  .contacts{ padding-top: 60px; }
  .contacts__content{ width: 100%; margin: 0; margin-bottom: 40px; padding-left: 30px; }
