@@ -208,7 +208,7 @@ img { width: 100%; height: auto; display: block; }
 .technology:after { content: " "; display: table; clear: both; }
 .technology__content { margin-top: 40px; }
 .technology__text { margin-bottom: 40px; }
-.technology__pic { width: 50%; float: right; height: -webkit-calc(100vh - 200px); height: calc(100vh - 200px); overflow: hidden; }
+.technology__pic { width: 50%; float: right; height: -webkit-calc(100vh - 80px); height: calc(100vh - 80px); overflow: hidden; background: url(../img/about_us_image_02.jpg); background-size: cover; background-repeat: no-repeat; }
 .technology__pic img { width: 100%; display: block; height: auto; }
 
 .news { *zoom: 1; padding-bottom: 80px; }
