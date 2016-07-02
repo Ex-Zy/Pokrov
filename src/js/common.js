@@ -30,7 +30,6 @@
 
 	//popup
 	$(".js-open-popup").on("click", function(){
-
 		var link  = $(this).data('link'),
 			popup = $('.js-popup[data-popup="' + link + '"]'),
 			sliderText = popup.find('.js-slider-pop-text'),
