@@ -52,6 +52,8 @@ p
 	+pro
 	color: $color-dark-1
 	font-size: $font-normal
+	+r(768)
+		font-size: $font-medium
 	&:not(:last-of-type)
 		margin-bottom: $space
 img
@@ -89,6 +91,10 @@ img
 	height: 300px
 	padding: 55px 60px
 	background-color: $color-white-1
+%col-left
+	max-width: 480px
+	float: right
+	padding-right: 80px
 //basic
 .btn
 	@extend %button
@@ -110,9 +116,7 @@ img
 // .inner-r
 // 	@extend %inner-r
 .col-left
-	max-width: 480px
-	float: right
-	padding-right: 80px
+	@extend %col-left
 	+r(960)
 		width: 50%
 // .col-right
