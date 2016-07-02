@@ -1,7 +1,5 @@
 // Normally mainpage styles 
 .out
-	// max-width: 1400px
-	// max-width: 1360px
 	min-width: 300px
 	width: 100%
 	min-height: 100%
@@ -30,25 +28,20 @@
 			+r(900)
 				padding: 0
 				margin-bottom: 30px
-		p
-			+r(900)
-				font-size: 20px
 	&__text
 		margin-bottom: $space-triple
 .gallery
 	padding-bottom: 80px
-	+r(420)
+	+r(900)
 		padding-bottom: $space-triple
 	.h1
 		text-align: center
-		+r(420)
+		+r(900)
 			font-size: 27px
 .item-list
 	font-size: 0
 	margin: 0 0 0 -1%
 	+r(1200)
-		margin: 0
-	+r(420)
 		margin: 0
 	+clr
 .item
@@ -88,10 +81,6 @@
 			margin-bottom: 0 !important
 		a
 			color: $color-dark-1
-	img
-		width: 100%
-		display: block
-		height: auto
 	a
 		text-decoration: none
 	&__pic
@@ -106,7 +95,7 @@
 .about
 	+clr
 	padding-bottom: 80px
-	+r(420)
+	+r(900)
 		padding-bottom: $space-triple
 	+clr
 	&__content
@@ -127,10 +116,7 @@
 				font-size: 18px
 				margin-bottom: $space
 	&__pic
-		width: 50%
-		float: right
-		height: calc(100vh - 80px)
-		overflow: hidden
+		@extend %col-right
 		background-size: cover
 		background-repeat: no-repeat
 		+r(768)
@@ -146,11 +132,6 @@
 			+r(420)
 				margin: 0
 				font-size: $font-medium
-	&__pic
-		img
-			width: 100%
-			height: auto
-			display: block
 	&__list
 		margin-bottom: $space-triple
 		+r(420)
@@ -238,11 +219,6 @@
 			float: none
 			width: 100%
 			margin: 0
-		// +r(420)
-		// 	width: 100%
-		// 	float: none
-		// 	margin: 0
-		// 	padding: 0 30px
 	&__text
 		margin-bottom: $space-double
 		p
@@ -252,10 +228,7 @@
 		+r(420)
 			left: 15%
 	&__pic
-		width: 50%
-		float: right
-		height: calc(100vh - 80px)
-		overflow: hidden
+		@extend %col-right
 		background: url(../img/about_us_image_02.jpg)
 		background-size: cover
 		background-repeat: no-repeat
@@ -298,15 +271,6 @@
 			.btn
 				display: table
 				margin: auto
-		// +r(420)
-		// 	width: 100%
-		// 	margin: 0
-		// 	float: none
-		// 	padding: 0 30px
-		// 	.data
-		// 		font-size: $font-medium
-		// 	.btn
-		// 		left: 15%
 	&__title
 		h2
 			margin-bottom: 0
@@ -328,14 +292,6 @@
 				left: 9px
 				height: 100%
 				width: 100%
-		// +r(420)
-		// 	width: 100%
-		// 	float: none
-		// 	margin-bottom: 30px
-		img
-			width: 100%
-			display: block
-			height: auto
 	&__desc
 		margin-bottom: 30px
 		p

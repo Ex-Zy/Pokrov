@@ -95,6 +95,11 @@ img
 	max-width: 480px
 	float: right
 	padding-right: 80px
+%col-right
+	width: 50%
+	float: right
+	height: calc(100vh - 80px)
+	overflow: hidden
 //basic
 .btn
 	@extend %button
@@ -137,14 +142,7 @@ img
 .h3
 	font-size: $font-medium
 	&:not(:last-child)
-		margin-bottom: 25px 
-.data
-	+md
-	color: $color-dark-1
-	font-size: $font-normal
-	font-weight: normal
-	opacity: 0.6
-	line-height: 1.38
+		margin-bottom: 25px
 .h4
 	+semi
 	color: $color-active
@@ -152,6 +150,13 @@ img
 	font-weight: 600
 	text-transform: uppercase
 	margin-bottom: 15px
+.data
+	+md
+	color: $color-dark-1
+	font-size: $font-normal
+	font-weight: normal
+	opacity: 0.6
+	line-height: 1.38
 .title-link
 	+md
 	font-size: $font-large
