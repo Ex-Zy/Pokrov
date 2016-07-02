@@ -1,16 +1,14 @@
 .footer
 	position: relative
-	// position: fixed
-	// bottom: 0
-	// left: 0 
-	// right: 0
-	// width: 100%
 	background-color: #fafafa
-	// height: 93px 
 	text-transform: uppercase
 	color: $color-dark-1
 	+md
 	font-size: $font-medium 
+	&.is-visible-mob
+		display: none
+		+r(768)
+			display: block
 	.inner
 		padding: 22px 0
 		+r(740)

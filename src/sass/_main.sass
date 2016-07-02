@@ -1,7 +1,5 @@
 // Normally mainpage styles 
 .out
-	// max-width: 1400px
-	// max-width: 1360px
 	min-width: 300px
 	width: 100%
 	min-height: 100%
@@ -30,25 +28,20 @@
 			+r(900)
 				padding: 0
 				margin-bottom: 30px
-		p
-			+r(900)
-				font-size: 20px
 	&__text
 		margin-bottom: $space-triple
 .gallery
 	padding-bottom: 80px
-	+r(420)
+	+r(900)
 		padding-bottom: $space-triple
 	.h1
 		text-align: center
-		+r(420)
+		+r(900)
 			font-size: 27px
 .item-list
 	font-size: 0
 	margin: 0 0 0 -1%
 	+r(1200)
-		margin: 0
-	+r(420)
 		margin: 0
 	+clr
 .item
@@ -88,10 +81,6 @@
 			margin-bottom: 0 !important
 		a
 			color: $color-dark-1
-	img
-		width: 100%
-		display: block
-		height: auto
 	a
 		text-decoration: none
 	&__pic
@@ -106,14 +95,20 @@
 .about
 	+clr
 	padding-bottom: 80px
-	+r(420)
+	+r(900)
 		padding-bottom: $space-triple
 	+clr
 	&__content
 		margin-top: $space-double
-		+r(420)
-			width: 100%
+		@extend %col-left
+		+r(1024)
 			padding: 0 30px
+			float: left
+			width: 50%
+			max-width: none
+		+r(768)
+			float: none
+			width: 100%
 			margin: 0
 		.h4
 			+r(420)
@@ -121,12 +116,14 @@
 				font-size: 18px
 				margin-bottom: $space
 	&__pic
-		width: 50%
-		float: right
-		+r(420)
+		@extend %col-right
+		background-size: cover
+		background-repeat: no-repeat
+		+r(768)
 			float: none
 			width: 100%
 			margin-bottom: $space-double
+			height: 347px
 	&__text
 		margin-bottom: $space-triple
 		+r(420)
@@ -135,11 +132,6 @@
 			+r(420)
 				margin: 0
 				font-size: $font-medium
-	&__pic
-		img
-			width: 100%
-			height: auto
-			display: block
 	&__list
 		margin-bottom: $space-triple
 		+r(420)
@@ -177,8 +169,8 @@
 			margin-bottom: 10px
 
 .services_intro
-	background: url(../img/services_image.jpg)
-	min-height: 250px
+	height: 250px
+	overflow: hidden
 	+cover
 	+r(420)
 		display: none
@@ -198,7 +190,7 @@
 	width: 50%
 	&:nth-child(-n+2)
 		margin-bottom: $space-double
-	+r(420)
+	+r(768)
 		width: 100%
 		&:not(:last-child)
 			margin-bottom: $space-double
@@ -213,37 +205,37 @@
 		text-decoration: none
 .technology
 	+clr
-	+r(420)
+	+r(900)
 		padding-bottom: $space-triple
 	&__content
 		margin-top: $space-double
-		+r(420)
-			width: 100%
-			float: none
-			margin: 0
+		@extend %col-left
+		+r(1024)
 			padding: 0 30px
-		+r(960)
+			float: left
 			width: 50%
+			max-width: none
+		+r(768)
+			float: none
+			width: 100%
+			margin: 0
 	&__text
 		margin-bottom: $space-double
 		p
 			+r(420)
-				font-size: 20px
+				font-size: $font-medium
 	.btn
 		+r(420)
 			left: 15%
 	&__pic
-		width: 50%
-		float: right
-		height: calc(100vh - 80px)
-		overflow: hidden
-		background: url(../img/about_us_image_02.jpg)
+		@extend %col-right
 		background-size: cover
 		background-repeat: no-repeat
-		+r(420)
+		+r(768)
 			float: none
 			width: 100%
 			margin-bottom: $space-double
+			height: 347px
 		img
 			width: 100%
 			display: block
@@ -257,20 +249,27 @@
 		+clr
 		&:not(:last-child)
 			margin-bottom: $space-triple
-			+r(420)
+			+r(900)
 				margin-bottom: 80px
 	&__content
 		margin-top: $space
 		padding-right: 168px
-		+r(420)
+		@extend %col-left
+		+r(1024)
+			padding: 0 30px
+			float: left
+			width: 50%
+			max-width: none
+		+r(768)
+			float: none
 			width: 100%
 			margin: 0
-			float: none
-			padding: 0 30px
 			.data
 				font-size: $font-medium
+		+r(420)
 			.btn
-				left: 15%
+				display: table
+				margin: auto
 	&__title
 		h2
 			margin-bottom: 0
@@ -278,14 +277,20 @@
 	&__pic
 		width: 50%
 		float: right
-		+r(420)
-			width: 100%
+		+r(768)
 			float: none
-			margin-bottom: 30px
-		img
 			width: 100%
-			display: block
-			height: auto
+			margin-bottom: 30px
+			overflow: hidden
+		+r(420)
+			height: 300px
+			position: relative
+			img
+				position: absolute
+				top: 0
+				left: 9px
+				height: 100%
+				width: 100%
 	&__desc
 		margin-bottom: 30px
 		p
@@ -294,34 +299,36 @@
 				font-size: $font-medium
 .contacts
 	+clr
-	+r(420)
+	+r(900)
+		display: flex
+		flex-direction: column-reverse
 		padding-top: $space-triple
 	p
 		margin: 0
 	&__content
 		margin-top: 117px
-		+r(420)
+		@extend %col-left
+		+r(900)
 			width: 100%
-			margin: 0
-			margin-bottom: $space-double
-			padding-left: 30px
+			margin: 0 0 $space-double
+			padding: 0 30px
 		.copy
 			margin-bottom: $space-double
 		p
 			font-size: $font-small
 			margin-bottom: 18px
-			+r(420)
+			+r(900)
 				font-size: 26px
 		adress
 			font-size: $font-medium
 			font-weight: normal
 			color: $color-dark-1
 			+md
-			+r(420)
+			+r(900)
 				font-size: 26px
 	&__adr
 		margin-bottom: 80px
-		+r(420)
+		+r(900)
 			margin-bottom: 30px
 	&__info
 		a
@@ -333,21 +340,14 @@
 			font-weight: normal
 			+pro
 			color: $color-dark-1
-			+r(420)
+			+r(900)
 				display: block
 				font-size: 26px
 	&__map
 		width: 50%
 		float: right
 		height: calc(100vh - 80px)
-		+r(1200)
-			width: 61.458333333333336%
-			height: auto
-			&:before
-				content: ''
-				display: block
-				padding-bottom: 100%
-		+r(420)
+		+r(900)
 			width: 100%
 			
 .slider
@@ -429,9 +429,11 @@
 .album
 	padding-bottom: 80px
 	.h1
-		+r(420)
+		+r(900)
 			font-size: 26px
-	+r(420)
+	+r(1024)
+		.inner
+			max-width: none
 		padding-top: $space
 		padding-bottom: $space-triple
 	&__list
@@ -454,7 +456,7 @@
 			height: auto
 			display: block
 	&__content
-		+r(420)
+		+r(1024)
 			padding: 0 45px 0 30px
 .products-intro
 	background: url(../img/services_category_01_slide_image.jpg)
@@ -463,43 +465,47 @@
 .products
 	padding: 40px 0 80px 0
 	p, strong
-		+r(420)
+		+r(900)
 			font-size: $font-medium
 	h2
-		+r(420)
+		+r(900)
 			font-size: 26px
 
-	+r(420)
+	+r(900)
 		padding-bottom: $space-triple
 	&__content
-		+r(420)
+		+r(1024)
 			padding: 0 45px 0 30px
 	&__text
 		margin-bottom: 55px
-		+r(420)
+		+r(900)
 			margin-bottom: 35px
 	&__album
 		margin-bottom: $space-triple
-		+r(420)
+		+r(900)
 			margin-bottom: $space-double
 		.album__list
 			margin-bottom: $space-double
 		.album__list-item
+<<<<<<< HEAD
 			height: 165px
 			overflow: hidden
 			+r(420)
+=======
+			+r(900)
+>>>>>>> cd009501885ea47281dbc42f77f0faf6e1b21138
 				width: 49.5%
 				margin-left: 0.5%
 				margin-bottom: 0.5%
 		.btn-c
 			text-align: center
 	&__guarantee
-		+r(420)
+		+r(900)
 			padding: 0 45px 0 30px
 		h3
-			+r(420)
+			+r(900)
 				font-size: 18px
 				font-weight: 500
 		p
-			+r(420)
+			+r(900)
 				margin-bottom: $space-double

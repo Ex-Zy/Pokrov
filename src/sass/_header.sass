@@ -1,7 +1,7 @@
 .header
 	position: relative
 	margin-bottom: 30px
-	background-color: #FFF 
+	background-color: $color-white-1 
 	+r(900)
 		position: fixed
 		top: 0
@@ -23,18 +23,6 @@
 		line-height: 1
 		+rm(901)
 			padding-top: 6px
-		+r(420)
-			float: none
-			padding: 0
-	&__switcher
-		max-width: $width-col-header
-		float: right
-		text-align: right
-		.nav
-			padding: 0
-		+r(900)
-			.nav__link
-				font-size: 16px
 	&__nav
 		overflow: hidden
 		text-align: center
@@ -42,34 +30,84 @@
 		&.is-show
 			right: 0
 		+r(900)
-			// overflow-x: hidden
-			// overflow-y: auto
 			overflow: visible
 			white-space: normal
 			text-align: right
-			top: 59px
+			top: 0
 			right: -100%
 			bottom: 0
 			width: 250px
-			background-color: #FFF
+			height: 100%
+			background-color: $color-white-1
 			z-index: 100
 			position: fixed
-			padding: 0 25px
+			padding: 60px 25px
 			+tr(right 0.5s)
-			.header__switcher
+			.nav
+				padding: 77px 0
+				overflow: auto
+				height: 100%
+	&__switcher
+		max-width: $width-col-header
+		float: right
+		text-align: right
+		.nav
+			padding: 0
+		+r(900)
+			position: absolute
+			bottom: 0
+			left: 0
+			right: 0
+			margin: auto
+			padding: 0 25px 30px
+			float: none
+			max-width: none
+			z-index: 1
+			background-color: $color-white-1 
+			.nav
+				overflow: visible
+				height: auto
+				padding: 0
+			.nav__link
+				font-size: $font-normal
+				padding-bottom: 0
+				display: inline-block
+.nav
+	display: inline-block
+	font-size: 0
+	padding: 0 30px
+	+r(900)
+		display: block
+		padding: 77px 0
+	&__link
+		font-size: $font-small-x
+		display: inline-block
+		text-decoration: none
+		+semi
+		color: $color-dark-1
+		position: relative
+		cursor: pointer
+		padding-bottom: 15px
+		+r(900)
+			padding-bottom: 10px
+			color: #3d3834
+			font-size: $font-medium
+		+rm(901)
+			&:after
+				content: ''
+				display: block
 				position: absolute
-				bottom: 0
+				bottom: 0px
 				left: 0
 				right: 0
-				margin: auto
-				padding: 0 25px 30px
-				float: none
-				max-width: none
-				.nav__link
-					font-size: 16px
-					padding-bottom: 0
-					display: inline-block
-				
+				border-bottom: 2px solid transparent
+				+tr(all 0.3s)
+		+ .nav__link
+			margin-left: 30px
+		&:hover, &.is-active
+			color: $color-active
+			&:after
+				border-color: $color-active
 .mobile-menu
 	display: none
 	width: 20px
@@ -110,41 +148,3 @@
 	&:before
 		top: 0
 		transform-origin: 2px 4px
-.logo
-	display: inline-block
-.nav
-	display: inline-block
-	font-size: 0
-	padding: 0 30px
-	+r(900)
-		display: block
-		padding: 77px 0
-	&__link
-		font-size: $font-small-x
-		display: inline-block
-		text-decoration: none
-		+semi
-		color: $color-dark-1
-		position: relative
-		cursor: pointer
-		padding-bottom: 15px
-		+r(900)
-			padding-bottom: 10px
-			color: #3d3834
-			font-size: 20px
-		+rm(901)
-			&:after
-				content: ''
-				display: block
-				position: absolute
-				bottom: 0px
-				left: 0
-				right: 0
-				border-bottom: 2px solid transparent
-				+tr(all 0.3s)
-		+ .nav__link
-			margin-left: 30px
-		&:hover, &.is-active
-			color: $color-active
-			&:after
-				border-color: $color-active
