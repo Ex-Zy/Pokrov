@@ -270,6 +270,7 @@ img { width: 100%; height: auto; display: block; }
 .products__text { margin-bottom: 55px; }
 .products__album { margin-bottom: 60px; }
 .products__album .album__list { margin-bottom: 40px; }
+.products__album .album__list-item { height: 165px; overflow: hidden; }
 .products__album .btn-c { text-align: center; }
 
 .popup { display: none; position: fixed; top: 0; right: 0; bottom: 0; left: 0; z-index: 999; overflow: auto; background-color: #FFF; }
