@@ -87,30 +87,71 @@
 			currentBlock.text(currentSlide);
 		})
 
+		$('.js-slider-doc').slick({
+			infinite: true,
+			speed: 1200,
+			autoplay: true,
+			autoplaySpeed: 3000,
+			slidesToShow: 3,
+			slidesToScroll: 1,
+			centerMode: true,
+			arrows: false,
+			responsive: [
+			   {
+			     breakpoint: 1024,
+			     settings: {
+			       slidesToShow: 1,
+			       slidesToScroll: 1,
+			       centerPadding: '200px',
+			       centerMode: true,
+			     }
+			   },
+			   {
+			     breakpoint: 767,
+			     settings: {
+			       slidesToShow: 1,
+			       slidesToScroll: 1,
+			       centerPadding: '150px',
+			       centerMode: true,
+			     }
+			   },
+			   {
+			     breakpoint: 620,
+			     settings: {
+			       slidesToShow: 1,
+			       slidesToScroll: 1,
+			       centerPadding: '100px',
+			       centerMode: true,
+			     }
+			   },
+			   {
+			     breakpoint: 480,
+			     settings: {
+			       slidesToShow: 1,
+			       slidesToScroll: 1,
+			       centerPadding: '30px',
+			       centerMode: true,
+			     }
+			   },
+			   {
+			     breakpoint: 380,
+			     settings: {
+			       slidesToShow: 1,
+			       slidesToScroll: 1,
+			       centerPadding: '10px',
+			       centerMode: true,
+			     }
+			   }
+			]
+		});
+
 		return false;
 	});
 
+
+
 	$(".js-close").on("click", function(){
 		$(this).parents(".js-popup").removeClass('is-active');
-		$("body").removeClass('is-hidden');
-	});
-
-	$(".js-popup-doc").on("click", function(){
-		var link  = $(this).data('link'),
-			popup = $('.js-popup-doc[data-popup="' + link + '"]'),
-
-		// $("body").addClass('is-hidden');
-		// popup.addClass('is-active');
-
-		// $('.js-slider-doc').slick({
-		// 	speed: 900,
-		// 	slidesToShow: 3,
-		// 	slidesToScroll: 1,
-		// });
-	});
-
-	$(".js-close-doc").on("click", function(){
-		$(this).parents(".js-popup-documents").removeClass('is-active');
 		$("body").removeClass('is-hidden');
 	});
 
