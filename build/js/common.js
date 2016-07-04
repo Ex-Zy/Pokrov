@@ -139,3 +139,6 @@
 // 		$('.technology__content').outerWidth(halfWidth);	
 // 	}
 });
+  jQuery(window).load(function(){
+	 jQuery('.album__list').masonry({ columnWidth: 14, itemSelector:'.album__list-item' });
+ });
