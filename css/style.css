@@ -128,7 +128,7 @@ img { width: 100%; height: auto; display: block; }
 
 .col-left, .about__content, .technology__content, .news__content, .contacts__content { max-width: 480px; float: right; padding-right: 80px; }
 
-.about__pic, .technology__pic { width: 50%; float: right; height: -webkit-calc(100vh - 80px); height: calc(100vh - 80px); overflow: hidden; }
+.slider-unit, .technology__pic { width: 50%; float: right; height: -webkit-calc(100vh - 80px); height: calc(100vh - 80px); overflow: hidden; }
 
 .btn { -webkit-transition: all 0.3s; transition: all 0.3s; }
 .btn:hover { background-color: #c3b091; color: #fff; }
@@ -182,7 +182,6 @@ img { width: 100%; height: auto; display: block; }
 .about:after { content: " "; display: table; clear: both; }
 .about:after { content: " "; display: table; clear: both; }
 .about__content { margin-top: 40px; }
-.about__pic { background-size: cover; background-repeat: no-repeat; }
 .about__text { margin-bottom: 60px; }
 .about__list { margin-bottom: 60px; }
 .about__list-item:not(:last-child) { margin-bottom: 10px; }
@@ -190,6 +189,9 @@ img { width: 100%; height: auto; display: block; }
 .about__doc-item { padding-left: 40px; position: relative; }
 .about__doc-item:after { content: ""; display: block; position: absolute; width: 20px; height: 1px; background-color: #c3b091; left: 6px; top: 12px; bottom: 0px; right: 0; }
 .about__doc-item:not(:last-child) { margin-bottom: 10px; }
+
+.slider-unit .slick-list, .slider-unit .slick-track, .slider-unit .slick-slide { height: 100%; }
+.slider-unit .slick-slide { background-size: cover; background-repeat: no-repeat; background-position: center; }
 
 .services_intro { height: 250px; overflow: hidden; background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; }
 
@@ -316,6 +318,10 @@ img { width: 100%; height: auto; display: block; }
 
 .slide-index { display: inline-block; position: absolute; left: 60px; bottom: 16px; font-family: "ITCNewVeljovicProCnMd", serif; font-size: 26px; line-height: 1; color: rgba(74, 74, 74, 0.25); }
 .slide-index__current { font-size: 56px; color: #4a4a4a; }
+
+.slider-doc { position: relative; }
+.slider-doc .slick-slide:before { content: ""; display: block; position: absolute; z-index: 1; background-color: rgba(255, 255, 255, 0.9); top: 0; left: 0; width: 100%; height: 100%; opacity: 1; -webkit-transition: opacity 0.3s; transition: opacity 0.3s; }
+.slider-doc .slick-slide.slick-active:before { opacity: 0; }
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px){
  *{ -webkit-text-size-adjust: none; } }
 @media only screen and (max-width: 1200px){
@@ -381,7 +387,7 @@ img { width: 100%; height: auto; display: block; }
  .footer.is-visible-mob{ display: block; }
  p{ font-size: 20px; }
  .about__content{ float: none; width: 100%; margin: 0; }
- .about__pic{ float: none; width: 100%; margin-bottom: 40px; height: 347px; }
+ .slider-unit{ float: none; width: 100%; margin-bottom: 40px; height: 347px; }
  .services__list-item{ width: 100%; }
  .services__list-item:not(:last-child){ margin-bottom: 40px; }
  .technology__content{ float: none; width: 100%; margin: 0; }
