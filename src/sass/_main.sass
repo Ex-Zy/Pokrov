@@ -115,15 +115,6 @@
 				font-weight: 400
 				font-size: 18px
 				margin-bottom: $space
-	&__pic
-		@extend %col-right
-		background-size: cover
-		background-repeat: no-repeat
-		+r(768)
-			float: none
-			width: 100%
-			margin-bottom: $space-double
-			height: 347px
 	&__text
 		margin-bottom: $space-triple
 		+r(420)
@@ -167,7 +158,21 @@
 			right: 0
 		&:not(:last-child)
 			margin-bottom: 10px
-
+.slider-unit
+	@extend %col-right
+	.slick-list,
+	.slick-track,
+	.slick-slide
+		height: 100%
+	.slick-slide
+		background-size: cover
+		background-repeat: no-repeat
+		background-position: center
+	+r(768)
+		float: none
+		width: 100%
+		margin-bottom: $space-double
+		height: 347px
 .services_intro
 	height: 250px
 	overflow: hidden
@@ -345,7 +350,6 @@
 		height: calc(100vh - 80px)
 		+r(900)
 			width: 100%
-			
 .slider
 	overflow: hidden
 .slider-wrp
