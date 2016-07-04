@@ -160,3 +160,21 @@
 	&__current
 		font-size: 56px
 		color: $color-dark-1
+.slider-doc
+	position: relative
+	.slick-slide
+		&:before
+			content: ''
+			display: block
+			position: absolute
+			z-index: 1
+			background-color: rgba(255, 255, 255, 0.9)
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			opacity: 1
+			+tr(opacity 0.3s)
+		&.slick-active
+			&:before
+				opacity: 0
