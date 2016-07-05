@@ -87,7 +87,7 @@ return new Za.prototype.init(a,b,c,d,e)}m.Tween=Za,Za.prototype={constructor:Za,
 	  popup.addClass('is-active');
 
 	  if(!sliderDoc.hasClass("slick-initialized")) {
-			sliderDoc.not('.slick-initialized').slick({
+			sliderDoc.slick({
 				infinite: true,
 				speed: 1200,
 				autoplay: true,
@@ -146,7 +146,7 @@ return new Za.prototype.init(a,b,c,d,e)}m.Tween=Za,Za.prototype={constructor:Za,
 			});
 		} else {
 			sliderDoc.slick('unslick');
-			sliderDoc.not('.slick-initialized').slick({
+			sliderDoc.slick({
 				infinite: true,
 				speed: 1200,
 				autoplay: true,
