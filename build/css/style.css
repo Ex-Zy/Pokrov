@@ -219,6 +219,7 @@ img { width: 100%; height: auto; display: block; }
 .news__content { margin-top: 20px; padding-right: 168px; }
 .news__title { margin-bottom: 20px; }
 .news__title h2 { margin-bottom: 0; }
+.news__title a { text-decoration: none; }
 .news__pic { width: 50%; float: right; }
 .news__desc { margin-bottom: 30px; }
 .news__desc p { opacity: 0.6; }
@@ -264,10 +265,12 @@ img { width: 100%; height: auto; display: block; }
 .products-intro { background: url(../img/services_category_01_slide_image.jpg); min-height: 250px; background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; }
 
 .products { padding: 40px 0 80px 0; }
+.products__list { margin-bottom: 20px; }
 .products__text { margin-bottom: 55px; }
 .products__album { margin-bottom: 60px; }
 .products__album .album__list { margin-bottom: 40px; }
 .products__album .btn-c { text-align: center; }
+.products__guarantee p { margin-bottom: 20px; }
 
 .popup { display: none; position: fixed; top: 0; right: 0; bottom: 0; left: 0; z-index: 999; overflow: auto; background-color: #FFF; }
 .popup.is-active { display: block; }
