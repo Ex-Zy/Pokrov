@@ -54,7 +54,7 @@
 	  popup.addClass('is-active');
 
 	  if(!sliderDoc.hasClass("slick-initialized")) {
-			sliderDoc.not('.slick-initialized').slick({
+			sliderDoc.slick({
 				infinite: true,
 				speed: 1200,
 				autoplay: true,
@@ -113,7 +113,7 @@
 			});
 		} else {
 			sliderDoc.slick('unslick');
-			sliderDoc.not('.slick-initialized').slick({
+			sliderDoc.slick({
 				infinite: true,
 				speed: 1200,
 				autoplay: true,
