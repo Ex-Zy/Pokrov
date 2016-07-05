@@ -231,8 +231,20 @@ return new Za.prototype.init(a,b,c,d,e)}m.Tween=Za,Za.prototype={constructor:Za,
 	if(idMap) {
 		initMap();
 	}
+<<<<<<< HEAD
   jQuery(window).load(function(){
 	 jQuery('.album__list').masonry({ columnWidth: 14, itemSelector:'.album__list-item' });
  });
 
 });
+=======
+// // content-width
+// 	if ( $(window).width() > 960 ) {
+// 		var halfWidth = 480;
+// 		$('.technology__content').outerWidth(halfWidth);	
+// 	}
+});
+  jQuery(window).load(function(){
+	 jQuery('.album__list').masonry({ columnWidth: 14, itemSelector:'.album__list-item' });
+ });
+>>>>>>> ed89b8ec32259ade7e501ed9a9b94b0c4c7cb72a
