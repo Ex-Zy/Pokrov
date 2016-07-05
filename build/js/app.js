@@ -70,178 +70,66 @@ return new Za.prototype.init(a,b,c,d,e)}m.Tween=Za,Za.prototype={constructor:Za,
 	})
 
 	//popup
-	$(".js-open-popup").on("click", function(){
-		var link  = $(this).data('link'),
-			popup = $('.js-popup[data-popup="' + link + '"]'),
-			sliderText = popup.find('.js-slider-pop-text'),
-			sliderPic = popup.find('.js-slider-pop-pic'),
-			sliderDoc = popup.find('.js-slider-doc'),
-			total = popup.find('.slider-pop-text__item').length,
-			currentBlock = $('.slide-index__current');
+	 $(".js-open-popup").on("click", function(){
+
+	  var index = $(this).data('item'),
+	   link  = $(this).data('link'),
+	   popup = $('.js-popup[data-popup="' + link + '"]'),
+	   sliderText = popup.find('.js-slider-pop-text'),
+	   sliderPic = popup.find('.js-slider-pop-pic'),
+	   total = popup.find('.slider-pop-text__item').length,
+	   currentBlock = $('.slide-index__current');
 
 
-		$("body").addClass('is-hidden');
+	  $("body").addClass('is-hidden');
 
-		popup.addClass('is-active');
+	  popup.addClass('is-active');
 
-		sliderPic.slick({
-			dots: false,
-			arrows: false,
-			infinite: true,
-			speed: 600,
-			slidesToShow: 1,
-			slidesToScroll: 1,
-			asNavFor: sliderText,
-		});
+	  sliderPic.not('.slick-initialized').slick({
+	   dots: false,
+	   arrows: false,
+	   infinite: true,
+	   speed: 600,
+	   slidesToShow: 1,
+	   slidesToScroll: 1,
+	   asNavFor: sliderText,
+	  });
 
-		$('.slide-index__total').text(total);
+	  $('.slide-index__total').text(total);
 
-		var currentSlide;
+	  var currentSlide;
 
-		sliderText.on("init", function(slick) {
-			var currentSlide = sliderText.find('.slick-current.slick-active').data('slick-index') + 1;
-			currentBlock.text(currentSlide);
-		});
+	  sliderText.on("init", function(slick) {
+	   var currentSlide = sliderText.find('.slick-current.slick-active').data('slick-index') + 1;
+	   currentBlock.text(currentSlide);
+	  });
 
-		sliderText.slick({
-			dots: false,
-			infinite: true,
-			speed: 600,
-			slidesToShow: 1,
-			slidesToScroll: 1,
-			fade: true,
-			cssEase: 'linear',
-			asNavFor: sliderPic,
-			prevArrow: '.js-arrow-prev',
-			nextArrow: '.js-arrow-next'
-		});
+	  sliderText.not('.slick-initialized').slick({
+	   dots: false,
+	   infinite: true,
+	   speed: 600,
+	   slidesToShow: 1,
+	   slidesToScroll: 1,
+	   fade: true,
+	   cssEase: 'linear',
+	   asNavFor: sliderPic,
+	   prevArrow: '.js-arrow-prev',
+	   nextArrow: '.js-arrow-next'
+	  });
 
-		sliderText.on('afterChange', function() {
-			var currentSlide = sliderText.find('.slick-current.slick-active').data('slick-index') + 1;
-			currentBlock.text(currentSlide);
-		})
+	  sliderText.on('afterChange', function() {
+	   var currentSlide = sliderText.find('.slick-current.slick-active').data('slick-index') + 1;
+	   currentBlock.text(currentSlide);
+	  });
 
-		if(!sliderDoc.hasClass("slick-initialized")) {
-			sliderDoc.not('.slick-initialized').slick({
-				infinite: true,
-				speed: 1200,
-				autoplay: true,
-				autoplaySpeed: 3000,
-				slidesToShow: 3,
-				slidesToScroll: 1,
-				centerMode: true,
-				arrows: false,
-				responsive: [
-				   {
-				     breakpoint: 1024,
-				     settings: {
-				       slidesToShow: 1,
-				       slidesToScroll: 1,
-				       centerPadding: '200px',
-				       centerMode: true,
-				     }
-				   },
-				   {
-				     breakpoint: 767,
-				     settings: {
-				       slidesToShow: 1,
-				       slidesToScroll: 1,
-				       centerPadding: '150px',
-				       centerMode: true,
-				     }
-				   },
-				   {
-				     breakpoint: 620,
-				     settings: {
-				       slidesToShow: 1,
-				       slidesToScroll: 1,
-				       centerPadding: '100px',
-				       centerMode: true,
-				     }
-				   },
-				   {
-				     breakpoint: 480,
-				     settings: {
-				       slidesToShow: 1,
-				       slidesToScroll: 1,
-				       centerPadding: '30px',
-				       centerMode: true,
-				     }
-				   },
-				   {
-				     breakpoint: 380,
-				     settings: {
-				       slidesToShow: 1,
-				       slidesToScroll: 1,
-				       centerPadding: '10px',
-				       centerMode: true,
-				     }
-				   }
-				]
-			});
-		} else {
-			sliderDoc.slick('unslick');
-			sliderDoc.not('.slick-initialized').slick({
-				infinite: true,
-				speed: 1200,
-				autoplay: true,
-				autoplaySpeed: 3000,
-				slidesToShow: 3,
-				slidesToScroll: 1,
-				centerMode: true,
-				arrows: false,
-				responsive: [
-				   {
-				     breakpoint: 1024,
-				     settings: {
-				       slidesToShow: 1,
-				       slidesToScroll: 1,
-				       centerPadding: '200px',
-				       centerMode: true,
-				     }
-				   },
-				   {
-				     breakpoint: 767,
-				     settings: {
-				       slidesToShow: 1,
-				       slidesToScroll: 1,
-				       centerPadding: '150px',
-				       centerMode: true,
-				     }
-				   },
-				   {
-				     breakpoint: 620,
-				     settings: {
-				       slidesToShow: 1,
-				       slidesToScroll: 1,
-				       centerPadding: '100px',
-				       centerMode: true,
-				     }
-				   },
-				   {
-				     breakpoint: 480,
-				     settings: {
-				       slidesToShow: 1,
-				       slidesToScroll: 1,
-				       centerPadding: '30px',
-				       centerMode: true,
-				     }
-				   },
-				   {
-				     breakpoint: 380,
-				     settings: {
-				       slidesToShow: 1,
-				       slidesToScroll: 1,
-				       centerPadding: '10px',
-				       centerMode: true,
-				     }
-				   }
-				]
-			});
-		}
+	  sliderPic.slick('slickGoTo', index);
+	  sliderText.slick('slickGoTo', index);
 
-		return false; 
-	});
+	  console.log(sliderText);
+	  console.log(sliderPic);
+
+	  return false;
+	 });
 
 	$(".js-close").on("click", function(){
 		$(this).parents(".js-popup").removeClass('is-active');
