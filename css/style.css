@@ -379,6 +379,7 @@ h1 a img { width: auto; }
  .contacts__info span{ display: block; font-size: 26px; }
  .contacts__map{ width: 100%; }
  .slider-pic__item{ height: 347px; }
+ .slick-slider .h1{ font-size: 26px; }
  .album .h1{ font-size: 26px; }
  .products p, .products strong{ font-size: 20px; }
  .products h2{ font-size: 26px; }
