@@ -282,7 +282,7 @@ h1 a img { width: auto; }
 
 .popup__side { float: right; width: 50%; }
 
-.popup__content { position: relative; float: right; height: -webkit-calc(100vh - 50px); height: calc(100vh - 50px); padding-right: 80px; }
+.popup__content { position: relative; float: right; height: -webkit-calc(100vh - 50px); height: calc(100vh - 50px); padding-right: 100px; }
 .popup__content .arrow-left { left: 330px; }
 .popup__content .arrow-right { left: 395px; }
 

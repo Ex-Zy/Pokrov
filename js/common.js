@@ -217,6 +217,182 @@
 
 	  return false;
 	 });
+   $(".js-open-popup-docs").on("click", function(){
+
+   var link  = $(this).data('link'),
+    popup = $('.js-popup[data-popup="' + link + '"]'),
+    sliderText = popup.find('.js-slider-pop-text'),
+    sliderPic = popup.find('.js-slider-pop-pic'),
+    sliderDoc = popup.find('.js-slider-doc'),
+    total = popup.find('.slider-pop-text__item').length,
+    currentBlock = $('.slide-index__current');
+
+
+   $("body").addClass('is-hidden');
+
+   popup.addClass('is-active');
+
+   if(!sliderDoc.hasClass("slick-initialized")) {
+   sliderDoc.slick({
+    infinite: true,
+    speed: 1200,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    centerMode: true,
+    arrows: false,
+    responsive: [
+       {
+         breakpoint: 1024,
+         settings: {
+           slidesToShow: 1,
+           slidesToScroll: 1,
+           centerPadding: '200px',
+           centerMode: true,
+         }
+       },
+       {
+         breakpoint: 767,
+         settings: {
+           slidesToShow: 1,
+           slidesToScroll: 1,
+           centerPadding: '150px',
+           centerMode: true,
+         }
+       },
+       {
+         breakpoint: 620,
+         settings: {
+           slidesToShow: 1,
+           slidesToScroll: 1,
+           centerPadding: '100px',
+           centerMode: true,
+         }
+       },
+       {
+         breakpoint: 480,
+         settings: {
+           slidesToShow: 1,
+           slidesToScroll: 1,
+           centerPadding: '30px',
+           centerMode: true,
+         }
+       },
+       {
+         breakpoint: 380,
+         settings: {
+           slidesToShow: 1,
+           slidesToScroll: 1,
+           centerPadding: '10px',
+           centerMode: true,
+         }
+       }
+    ]
+   });
+  } else {
+   sliderDoc.slick('unslick');
+   sliderDoc.slick({
+    infinite: true,
+    speed: 1200,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    centerMode: true,
+    arrows: false,
+    responsive: [
+       {
+         breakpoint: 1024,
+         settings: {
+           slidesToShow: 1,
+           slidesToScroll: 1,
+           centerPadding: '200px',
+           centerMode: true,
+         }
+       },
+       {
+         breakpoint: 767,
+         settings: {
+           slidesToShow: 1,
+           slidesToScroll: 1,
+           centerPadding: '150px',
+           centerMode: true,
+         }
+       },
+       {
+         breakpoint: 620,
+         settings: {
+           slidesToShow: 1,
+           slidesToScroll: 1,
+           centerPadding: '100px',
+           centerMode: true,
+         }
+       },
+       {
+         breakpoint: 480,
+         settings: {
+           slidesToShow: 1,
+           slidesToScroll: 1,
+           centerPadding: '30px',
+           centerMode: true,
+         }
+       },
+       {
+         breakpoint: 380,
+         settings: {
+           slidesToShow: 1,
+           slidesToScroll: 1,
+           centerPadding: '10px',
+           centerMode: true,
+         }
+       }
+    ]
+   });
+   };
+
+   sliderPic.slick({
+    dots: false,
+    arrows: false,
+    infinite: true,
+    speed: 600,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    asNavFor: sliderText,
+   });
+
+   $('.slide-index__total').text(total);
+
+   var currentSlide;
+
+   sliderText.on("init", function(slick) {
+    var currentSlide = sliderText.find('.slick-current.slick-active').data('slick-index') + 1;
+    currentBlock.text(currentSlide);
+   });
+
+   sliderText.slick({
+    dots: false,
+    infinite: true,
+    speed: 600,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    fade: true,
+    cssEase: 'linear',
+    asNavFor: sliderPic,
+    prevArrow: '.js-arrow-prev',
+    nextArrow: '.js-arrow-next'
+   });
+
+   sliderText.on('afterChange', function() {
+    var currentSlide = sliderText.find('.slick-current.slick-active').data('slick-index') + 1;
+    currentBlock.text(currentSlide);
+   });
+
+   console.log(sliderText);
+   console.log(sliderPic);
+
+   return false;
+  });
 
 	$(".js-close").on("click", function(){
 		$(this).parents(".js-popup").removeClass('is-active');
