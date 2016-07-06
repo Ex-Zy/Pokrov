@@ -6,24 +6,15 @@
 	bottom: 0
 	left: 0
 	z-index: 999
-	overflow: auto
+	// overflow: auto
+	overflow: hidden
 	background-color: #FFF
-	// +vertical
 	&.is-active
 		display: block
-.popup__overlay/* возможно потребуется убрать */
-	position: absolute
-	top: 0
-	right: 0
-	bottom: 0
-	left: 0
-	background-color: rgba(0, 0, 0, 0.7) 
 .popup__main
 	display: inline-block
-	// vertical-align: middle
 	overflow-y: auto
 	overflow-x: hidden
-	// height: 100%
 	width: 100%
 	text-align: left
 	background-color: $color-white-1
@@ -31,19 +22,14 @@
 	z-index: 1
 	&_space
 		padding-top: 50px
-.popup__col
-	display: inline-block
-	vertical-align: top
-	width: 50%
-	position: relative
-	height: 100%
 .popup__side
 	float: right
-	max-width: 590px
-	height: auto
+	width: 50%
 .popup__content
-	@extend %wrp
 	position: relative
+	float: right
+	height: calc(100vh - 50px)
+	padding-right: 80px
 	.arrow-left
 		left: 330px
 	.arrow-right
@@ -55,6 +41,7 @@
 	cursor: pointer
 	position: absolute
 	bottom: 0
+	z-index: 1
 	+hide-text
 	&:before
 		content: ''
@@ -95,7 +82,7 @@
 	right: 0
 	background-color: $color-active
 	width: 50px
-	height: 50px 
+	height: 50px
 	&:before
 		content: ''
 		display: block
@@ -107,6 +94,12 @@
 		bottom: 0
 		left: 0
 		margin: auto
+.slider-pop-pic
+	.slick-slide
+		height: calc(100vh - 50px)
+		img
+			width: 100%
+			height: 100%
 .slider-pop-text
 	@extend %slide-t
 .sign
