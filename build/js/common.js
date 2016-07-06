@@ -201,7 +201,7 @@
 	   cssEase: 'linear',
 	   asNavFor: sliderPic,
 	   prevArrow: '.js-arrow-prev',
-	   nextArrow: '.js-arrow-next'
+	   nextArrow: '.js-arrow-next',
 	  });
 
 	  sliderText.on('afterChange', function() {

@@ -6,7 +6,6 @@
 	bottom: 0
 	left: 0
 	z-index: 999
-	// overflow: auto
 	overflow: hidden
 	background-color: #FFF
 	&.is-active
@@ -26,15 +25,52 @@
 .popup__side
 	float: right
 	width: 50%
+	+r(1000)
+		width: 60%
+	+r(900)
+		width: 100%
+		float: none
 .popup__content
 	position: relative
 	float: right
 	height: calc(100vh - 50px)
-	padding-right: 100px
+	margin-right: 7.352941176470589%
+	padding: 55px 60px
+	width: 33.82352941176471%
+	+r(1100)
+		margin-right: 0
+		width: 50%
+	+r(1024)
+		width: 40%
+		padding: 55px 35px
+	+r(900)
+		float: none
+		width: 100%
+		padding: 40px 35px 111px
+		height: auto
+.slide-panel
+	position: absolute
+	left: 0
+	bottom: 0
+	padding: 0 60px
+	width: 100%
+	background-color: #FFF
+	z-index: 1
+	+clr
+	+r(1024)
+		padding: 0 35px
+	+r(380)
+		.arrow
+			display: none !important
+.slide-buttons-wrp
+	float: right
+	.arrow
+		position: relative
+		bottom: auto
 	.arrow-left
-		left: 330px
+		right: auto
 	.arrow-right
-		left: 395px
+		right: auto
 .arrow
 	width: 65px
 	height: 65px
@@ -64,7 +100,6 @@
 .popup__wrp
 	padding: 130px 0 80px
 	height: 100%
-	// max-width: 1360px
 	margin: auto
 .popup__header
 	height: 50px
@@ -97,12 +132,11 @@
 		margin: auto
 .slider-pop-pic
 	.slick-slide
-		height: calc(100vh - 50px)
-		img
-			width: 100%
-			height: 100%
-.slider-pop-text
-	@extend %slide-t
+		+rm(901)
+			height: calc(100vh - 50px)
+			img
+				width: 100%
+				height: 100%
 .sign
 	font-size: 16px
 	color: $color-dark-1
@@ -112,10 +146,8 @@
 	padding: 20px 0
 	opacity: 0
 .slide-index
-	display: inline-block
-	position: absolute
-	left: 60px
-	bottom: 16px
+	float: left
+	position: relative
 	+md
 	font-size: 26px
 	line-height: 1
