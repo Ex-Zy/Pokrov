@@ -234,7 +234,7 @@ return new Za.prototype.init(a,b,c,d,e)}m.Tween=Za,Za.prototype={constructor:Za,
 	   cssEase: 'linear',
 	   asNavFor: sliderPic,
 	   prevArrow: '.js-arrow-prev',
-	   nextArrow: '.js-arrow-next'
+	   nextArrow: '.js-arrow-next',
 	  });
 
 	  sliderText.on('afterChange', function() {
