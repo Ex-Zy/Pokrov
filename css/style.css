@@ -240,7 +240,7 @@ h1 a img { width: auto; }
 
 .slider { overflow: hidden; }
 
-.slider-wrp { width: 770px; position: relative; }
+.slider-wrp { width: 56.61765%; position: relative; }
 
 .slider-pic__item { background-size: cover; background-position: center; height: 430px; }
 
@@ -447,7 +447,8 @@ h1 a img { width: auto; }
  .category__content{ padding: 0 45px 0 30px; }
  .category__text{ padding: 0 45px 0 30px; }
  .album__list-item{ width: 45.5%; margin-left: 0.5%; margin-bottom: 0.5%; }
- .products__album .album__list-item{ width: 45%; } }
+ .products__album .album__list-item{ width: 45%; }
+ .popup__wrp{ padding: 80px 0 80px; } }
 @media only screen and (max-width: 380px){
  .slide-panel .arrow{ display: none !important; } }
 
