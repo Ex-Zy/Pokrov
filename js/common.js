@@ -62,7 +62,11 @@
 				slidesToShow: 3,
 				slidesToScroll: 1,
 				centerMode: true,
-				arrows: false,
+				arrows: true,
+				prevArrow: '.js-prev',
+				nextArrow: '.js-next',
+				draggable: false,
+				touchMove: true,
 				responsive: [
 				   {
 				     breakpoint: 1024,
@@ -71,6 +75,7 @@
 				       slidesToScroll: 1,
 				       centerPadding: '200px',
 				       centerMode: true,
+				       draggable: true,
 				     }
 				   },
 				   {
@@ -121,7 +126,11 @@
 				slidesToShow: 3,
 				slidesToScroll: 1,
 				centerMode: true,
-				arrows: false,
+				arrows: true,
+				prevArrow: '.js-prev',
+				nextArrow: '.js-next',
+				draggable: false,
+				touchMove: true,
 				responsive: [
 				   {
 				     breakpoint: 1024,
@@ -130,6 +139,7 @@
 				       slidesToScroll: 1,
 				       centerPadding: '200px',
 				       centerMode: true,
+				       draggable: true,
 				     }
 				   },
 				   {

@@ -95,7 +95,11 @@ return new Za.prototype.init(a,b,c,d,e)}m.Tween=Za,Za.prototype={constructor:Za,
 				slidesToShow: 3,
 				slidesToScroll: 1,
 				centerMode: true,
-				arrows: false,
+				arrows: true,
+				prevArrow: '.js-prev',
+				nextArrow: '.js-next',
+				draggable: false,
+				touchMove: true,
 				responsive: [
 				   {
 				     breakpoint: 1024,
@@ -104,6 +108,7 @@ return new Za.prototype.init(a,b,c,d,e)}m.Tween=Za,Za.prototype={constructor:Za,
 				       slidesToScroll: 1,
 				       centerPadding: '200px',
 				       centerMode: true,
+				       draggable: true,
 				     }
 				   },
 				   {
@@ -154,7 +159,11 @@ return new Za.prototype.init(a,b,c,d,e)}m.Tween=Za,Za.prototype={constructor:Za,
 				slidesToShow: 3,
 				slidesToScroll: 1,
 				centerMode: true,
-				arrows: false,
+				arrows: true,
+				prevArrow: '.js-prev',
+				nextArrow: '.js-next',
+				draggable: false,
+				touchMove: true,
 				responsive: [
 				   {
 				     breakpoint: 1024,
@@ -163,6 +172,7 @@ return new Za.prototype.init(a,b,c,d,e)}m.Tween=Za,Za.prototype={constructor:Za,
 				       slidesToScroll: 1,
 				       centerPadding: '200px',
 				       centerMode: true,
+				       draggable: true,
 				     }
 				   },
 				   {
