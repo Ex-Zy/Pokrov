@@ -226,7 +226,6 @@
 
 	  console.log(sliderText);
 	  console.log(sliderPic);
-
 	  return false;
 	 });
 
