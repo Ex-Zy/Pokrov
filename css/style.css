@@ -68,18 +68,7 @@ html { -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 @font-face { font-family: "ITCNewVeljovicDSPro"; src: url("fonts/ITCNewVeljovicDSPro.eot"); src: url("fonts/ITCNewVeljovicDSPro.eot?#iefix") format("embedded-opentype"), url("fonts/ITCNewVeljovicDSPro.woff2") format("woff2"), url("fonts/ITCNewVeljovicDSPro.woff") format("woff"), url("fonts/ITCNewVeljovicDSPro.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 @font-face { font-family: "ITCNewVeljovicProCnMd"; src: url("fonts/ITCNewVeljovicProCnMd.eot"); src: url("fonts/ITCNewVeljovicProCnMd.eot?#iefix") format("embedded-opentype"), url("fonts/ITCNewVeljovicProCnMd.woff2") format("woff2"), url("fonts/ITCNewVeljovicProCnMd.woff") format("woff"), url("fonts/ITCNewVeljovicProCnMd.ttf") format("truetype"); font-weight: normal; font-style: normal; }
-@font-face {
-	font-family: 'fonts/MarkSimonsonProximaNovaAltCondensedSemibold';
-	src: url('fonts/MarkSimonsonProximaNovaAltCondensedSemibold.eot');
-	src: url('fonts/MarkSimonsonProximaNovaAltCondensedSemibold.eot?#iefix') format('embedded-opentype'),
-		url('fonts/MarkSimonsonProximaNovaAltCondensedSemibold.woff') format('woff'),
-		url('fonts/MarkSimonsonProximaNovaAltCondensedSemibold.ttf') format('truetype');
-	font-weight: 600;
-	font-style: normal;
-}
-
-/* 
-@font-face { font-family: "MarkSimonsonProximaNovaAltCondensedSemibold"; src: url("fonts/MarkSimonsonProximaNovaAltCondensedSemibold.eot"); src: url("fonts/MarkSimonsonProximaNovaAltCondensedSemibold.eot?#iefix") format("embedded-opentype"), url("fonts/MarkSimonsonProximaNovaAltCondensedSemibold.woff2") format("woff2"), url("fonts/MarkSimonsonProximaNovaAltCondensedSemibold.woff") format("woff"), url("fonts/MarkSimonsonProximaNovaAltCondensedSemibold.ttf") format("truetype"); font-weight: normal; font-style: normal; } */
+@font-face { font-family: "MarkSimonsonProximaNovaAltCondensedSemibold"; src: url("fonts/MarkSimonsonProximaNovaAltCondensedSemibold.eot"); src: url("fonts/MarkSimonsonProximaNovaAltCondensedSemibold.eot?#iefix") format("embedded-opentype"), url("fonts/MarkSimonsonProximaNovaAltCondensedSemibold.woff2") format("woff2"), url("fonts/MarkSimonsonProximaNovaAltCondensedSemibold.woff") format("woff"), url("fonts/MarkSimonsonProximaNovaAltCondensedSemibold.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 .header { position: relative; margin-bottom: 30px; background-color: #fff; }
 .header__in { padding: 14px 50px 2px; *zoom: 1; }
 .header__in:after { content: " "; display: table; clear: both; }
@@ -364,8 +353,7 @@ h1 a img { width: auto; }
  .header__logo{ padding-top: 6px; }
  .nav__link:after{ content: ""; display: block; position: absolute; bottom: 0px; left: 0; right: 0; border-bottom: 2px solid transparent; -webkit-transition: all 0.3s; transition: all 0.3s; }
  .item:nth-child(-n+2){ margin-bottom: 50px; }
- .slider-pop-pic .slick-slide{ height: -webkit-calc(100vh - 50px); height: calc(100vh - 50px); }
- .slider-pop-pic .slick-slide img{ width: 100%; height: 100%; } }
+ .slider-pop-pic .slick-slide{ height: -webkit-calc(100vh - 50px); height: calc(100vh - 50px); } }
 @media only screen and (max-width: 900px){
  .header{ position: fixed; top: 0; left: 0; right: 0; z-index: 999; margin-bottom: 0; }
  .header__in{ padding: 23px 25px; }
@@ -407,7 +395,8 @@ h1 a img { width: auto; }
  .products__guarantee h3{ font-size: 18px; font-weight: 500; }
  .products__guarantee p{ margin-bottom: 40px; }
  .popup__side{ width: 100%; float: none; }
- .popup__content{ float: none; width: 100%; padding: 40px 35px 111px; height: auto; } }
+ .popup__content{ float: none; width: 100%; padding: 40px 35px 111px; height: auto; }
+ .slider-pop-pic .slick-slide{ height: 456px; background-size: cover; background-repeat: no-repeat; overflow: hidden; } }
 @media only screen and (max-width: 768px){
  .footer.is-visible-mob{ display: block; }
  p{ font-size: 20px; }
