@@ -68,7 +68,18 @@ html { -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 @font-face { font-family: "ITCNewVeljovicDSPro"; src: url("fonts/ITCNewVeljovicDSPro.eot"); src: url("fonts/ITCNewVeljovicDSPro.eot?#iefix") format("embedded-opentype"), url("fonts/ITCNewVeljovicDSPro.woff2") format("woff2"), url("fonts/ITCNewVeljovicDSPro.woff") format("woff"), url("fonts/ITCNewVeljovicDSPro.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 @font-face { font-family: "ITCNewVeljovicProCnMd"; src: url("fonts/ITCNewVeljovicProCnMd.eot"); src: url("fonts/ITCNewVeljovicProCnMd.eot?#iefix") format("embedded-opentype"), url("fonts/ITCNewVeljovicProCnMd.woff2") format("woff2"), url("fonts/ITCNewVeljovicProCnMd.woff") format("woff"), url("fonts/ITCNewVeljovicProCnMd.ttf") format("truetype"); font-weight: normal; font-style: normal; }
-@font-face { font-family: "MarkSimonsonProximaNovaAltCondensedSemibold"; src: url("fonts/MarkSimonsonProximaNovaAltCondensedSemibold.eot"); src: url("fonts/MarkSimonsonProximaNovaAltCondensedSemibold.eot?#iefix") format("embedded-opentype"), url("fonts/MarkSimonsonProximaNovaAltCondensedSemibold.woff2") format("woff2"), url("fonts/MarkSimonsonProximaNovaAltCondensedSemibold.woff") format("woff"), url("fonts/MarkSimonsonProximaNovaAltCondensedSemibold.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+@font-face {
+	font-family: 'fonts/MarkSimonsonProximaNovaAltCondensedSemibold';
+	src: url('fonts/MarkSimonsonProximaNovaAltCondensedSemibold.eot');
+	src: url('fonts/MarkSimonsonProximaNovaAltCondensedSemibold.eot?#iefix') format('embedded-opentype'),
+		url('fonts/MarkSimonsonProximaNovaAltCondensedSemibold.woff') format('woff'),
+		url('fonts/MarkSimonsonProximaNovaAltCondensedSemibold.ttf') format('truetype');
+	font-weight: 600;
+	font-style: normal;
+}
+
+/* 
+@font-face { font-family: "MarkSimonsonProximaNovaAltCondensedSemibold"; src: url("fonts/MarkSimonsonProximaNovaAltCondensedSemibold.eot"); src: url("fonts/MarkSimonsonProximaNovaAltCondensedSemibold.eot?#iefix") format("embedded-opentype"), url("fonts/MarkSimonsonProximaNovaAltCondensedSemibold.woff2") format("woff2"), url("fonts/MarkSimonsonProximaNovaAltCondensedSemibold.woff") format("woff"), url("fonts/MarkSimonsonProximaNovaAltCondensedSemibold.ttf") format("truetype"); font-weight: normal; font-style: normal; } */
 .header { position: relative; margin-bottom: 30px; background-color: #fff; }
 .header__in { padding: 14px 50px 2px; *zoom: 1; }
 .header__in:after { content: " "; display: table; clear: both; }
