@@ -358,7 +358,7 @@ h1 a img { width: auto; }
  .header{ position: fixed; top: 0; left: 0; right: 0; z-index: 999; margin-bottom: 0; }
  .header__in{ padding: 23px 25px; }
  .header__nav{ overflow: visible; white-space: normal; text-align: right; top: 0; right: -100%; bottom: 0; width: 250px; height: 100%; background-color: #fff; z-index: 100; position: fixed; padding: 60px 25px; -webkit-transition: right 0.5s; transition: right 0.5s; }
- .header__nav .nav{ padding: 77px 0; overflow: auto; height: 100%; }
+ .header__nav .nav{ padding: 77px 0; overflow-y: auto; overflow-x: hidden; height: 100%; }
  .header__switcher{ position: absolute; bottom: 0; left: 0; right: 0; margin: auto; padding: 0 25px 30px; float: none; max-width: none; z-index: 1; background-color: #fff; }
  .header__switcher .nav{ overflow: visible; height: auto; padding: 0; }
  .header__switcher .nav__link{ font-size: 16px; padding-bottom: 0; display: inline-block; }
